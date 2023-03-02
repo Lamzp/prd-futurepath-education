@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Us </title>
+    <title>Academic Information</title>
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -19,7 +16,7 @@
         <!-- navigation-primary -->
         <div class="container">
             <nav class="navigation-primary">
-                <a href="/" class="header__link-home">
+                <a href="../index.html" class="header__link-home">
                     <img src="../assets/images/Logo.png" alt="Futurepath Education" class="img">
                 </a>
                 <button class="mobile-nav-toggle">
@@ -39,14 +36,13 @@
                             <li class="nav-item"><a href="./faculty.html" class="nav-link">Faculty</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Our Programmes</a></li>
+                    <li class="nav-item"><a href="./our-programmes.html" class="nav-link">Our Programmes</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Consult</a></li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Help & FAQs</a>
                         <ul class="sub-nav" role="list">
                             <li class="nav-item"><a href="./faqs.html" class="nav-link">FAQs</a></li>
-                            <li class="nav-item"><a href="./academic-information.html" class="nav-link">Academic
-                                    Information</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Academic Information</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Pastoral Information</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Join Our Team</a></li>
@@ -59,42 +55,70 @@
 
                 <button class="btn btn-header"><span>Test Button</span></button>
             </nav>
-
-            <div class="location">
-                <h1 class="heading-secondary location__heading">OUR LOCATION</h1>
-                <p class="location__desc">Our hosting grounds are at the famous Brunel University London – home to the
-                    great British engineer Isambard Kingdom Brunel with state of the art design, engineering, and
-                    technology equipment. Brunel University is one of the few single campus universities in the capital
-                    London, and provider of various design, engineering, and technology degrees.</p>
-                <p class="location__desc">Our students will experience living, learning, and exploring in one of the
-                    quieter and peaceful parts of London with the benefit of direct access to the heart of the capital
-                    for fun activities and excursions.</p>
-            </div>
         </div>
     </header>
 
-    <section class="location-image">
-        <img src="../assets/images/location.jpg" alt="">
-    </section>
+    <div class="contact-us">
+        <div class="academic__content">
+            <h1 class="heading-h1 academic__heading">ACADEMIC INFORMATION</h1>
+            <p class="academic__desc">Learn more about how we impart our world-class educational model to driven
+                students from all over the world.
+            </p>
+        </div>
+    </div>
 
-    <!-- read our manifesto amazing programmes-->
-    <section class="read-our-manifesto read-our-manifesto--dark">
-        <div class="container">
-            <div class="read-our-manifesto__content">
-                <h2 class="heading-secondary read-our-manifesto__heading--amazing read-our-manifesto__heading--dark">I
-                    HAVE
-                    OTHER QUESTIONS:</h2>
-
-                <button class="btn read-our-manifesto__btn"><span>Our Programmes</span></button>
+    <form action="" class="form">
+        <div class="form__group">
+            <span class="form__title-full-name">Full Name *</span>
+            <div class="form__full-name">
+                <div class="form__first-name">
+                    <input type="text" id="first_name" placeholder="Enter the fist name...">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="form__last-name">
+                    <input type="text" id="last_name" placeholder="Enter the last name...">
+                    <label for="last_name">Last Name</label>
+                </div>
             </div>
-    </section>
+            <div class="form__email">
+                <label for="email">Email *</label>
+                <input type="email" placeholder="email@gmail.com...">
+            </div>
+
+            <div class="form__ask">
+                <span>What Would You Like To Ask About? *</span>
+                <select name="" id="">
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                </select>
+            </div>
+            <div class="form__ask">
+                <span>Are You...? *</span>
+                <select name="" id="">
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">Lorem ipsum dolor sit amet.</option>
+                </select>
+            </div>
+
+            <div class="form__message">
+                <label for="">Your Message *</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <button class="btn">Send</button>
+        </div>
 
 
+    </form>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
-                <h2 class="footer__heading heading-secondary">STAY UPDATED</h2>
+                <h2 class="footer__heading heading-primary">STAY UPDATED</h2>
 
                 <div class="sign-up">
                     <div class="sign-up__content">
@@ -114,28 +138,25 @@
             <div class="footer__light"></div>
 
             <div class="footer__bottom">
-                <div class="footer__sup-contact">
-                    <div class="footer__support">
-                        <h2 class="heading-secondary">
-                            SUPPORT
-                        </h2>
-                        <div class="footer__list">
-                            <a href="#!" class="footer__item"><span>Terms and Conditions</span></a>
-                            <a href="#!" class="footer__item"><span>Privacy Policy</span></a>
-                            <a href="#!" class="footer__item"><span>Complaints Policy</span></a>
-                            <a href="#!" class="footer__item"><span>FAQs</spa></a>
-                        </div>
-                    </div>
-                    <div class="footer__contact">
-                        <h2 class="heading-secondary">
-                            CONTACT
-                        </h2>
-                        <strong class="footer__email-admin">admin@futurepath.education</strong>
+                <div class="footer__support">
+                    <h2 class="heading-primary">
+                        SUPPORT
+                    </h2>
+                    <div class="footer__list">
+                        <a href="#!" class="footer__item"><span>Terms and Conditions</span></a>
+                        <a href="#!" class="footer__item"><span>Privacy Policy</span></a>
+                        <a href="#!" class="footer__item"><span>Complaints Policy</span></a>
+                        <a href="#!" class="footer__item"><span>FAQs</spa></a>
                     </div>
                 </div>
-
+                <div class="footer__contact">
+                    <h2 class="heading-primary">
+                        CONTACT
+                    </h2>
+                    <strong class="footer__email-admin">admin@futurepath.education</strong>
+                </div>
                 <div class="footer__find-your-future">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-primary">
                         FIND-YOUR-FUTURE.
                     </h2>
                     <a href="" class="footer__logo">
@@ -145,7 +166,7 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/app.js"></script>
+
 </body>
 
 </html>

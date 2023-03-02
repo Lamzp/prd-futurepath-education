@@ -20,6 +20,7 @@ html {
   --fw-bold: 700;
 
   --fs-heading: 5rem;
+  --fs-heading-h1: 6.4rem;
   --fs-desc: 2rem;
 
   --lts-005: 0.05em;
@@ -116,6 +117,9 @@ a {
 }
 .heading-primary {
   font-size: var(--fs-heading);
+}
+.heading-h1 {
+  font-size: var(--fs-heading-h1);
 }
 /* button */
 .btn {
@@ -534,20 +538,28 @@ a {
 .hero {
   margin-top: 165px;
 }
+.hero__heading {
+  width: 645px;
+}
 .hero strong {
   display: inline-block;
   position: relative;
+  transition: all 0.25s linear;
 }
 .hero strong::before {
   display: inline-block;
   content: "";
   position: absolute;
   left: -8px;
-  right: -8px;
+  right: 110%;
   bottom: 0;
   height: 10px;
   border-radius: 999px;
   background-color: #7877e6;
+  transition: all 0.75s linear;
+}
+.hero strong.active::before {
+  right: -8px;
 }
 .hero .desc {
   margin-top: 20px;
@@ -783,8 +795,6 @@ a {
 .faculty-mentor__desc {
   color: var(--clr-text-white);
 }
-.faculty-mentor__heading {
-}
 .faculty-mentor__img {
   width: 350px;
   height: 630px;
@@ -798,6 +808,108 @@ a {
   letter-spacing: 0.05em;
 }
 /* end page: faculty */
+
+/* start page: academic information */
+.academic {
+  padding: 85px 0 110px 0;
+}
+.academic__content {
+  width: 715px;
+  margin: 0 auto;
+  text-align: center;
+}
+.academic__heading {
+  --width: 440px;
+
+  width: var(--width);
+  margin: 0 auto;
+  color: var(--clr-secondary);
+  letter-spacing: var(--lts-005);
+  line-height: var(--lh--13);
+}
+.academic__desc {
+  margin-top: 20px;
+  font-size: var(--fs-desc);
+  line-height: var(--lh--13);
+  letter-spacing: var(--lts-005);
+}
+/* end page: academic information */
+
+/* start page: contact-us */
+.contact-us {
+  background-color: var(--clr-text-primary);
+}
+.form {
+  padding: 55px 0 55px 0;
+  background-color: var(--clr-text-primary);
+}
+.form input,
+.form textarea {
+  padding: 15px;
+  display: block;
+  width: calc(100% - 35px);
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+  font-family: var(--ff-system);
+  caret-color: #7877e6;
+  font-size: 1.8rem;
+}
+.form label {
+  display: inline-block;
+}
+.form input:focus-visible {
+  outline-offset: 4px;
+  outline: 2px solid #fff;
+}
+.form__group {
+  width: 710px;
+  margin: 0 auto;
+}
+.form__title-full-name {
+  font-size: 2rem;
+}
+.form__full-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.form__full-name label {
+  margin-top: 10px;
+}
+.form__first-name,
+.form__last-name {
+  width: calc(100% / 2);
+}
+.form__email {
+  margin-top: 30px;
+}
+.form__email label {
+  font-size: 2rem;
+  letter-spacing: var(--lts-005);
+}
+.form__message textarea {
+  width: calc(100% -30px);
+  height: 200px;
+}
+.form__ask span {
+  display: block;
+}
+.form__ask select {
+  display: inline-block;
+  padding-right: 15px;
+}
+.form__ask select:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+.form__ask option {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 15px;
+}
+/* end page: contact-us */
 
 /* footer */
 .footer {
@@ -928,10 +1040,6 @@ a {
     padding: 220px 0 0 35px;
     transition: all 0.25s linear;
     z-index: 98;
-  }
-  .heading-primary {
-    font-size: 3.4rem;
-    max-width: 100%;
   }
   .hero {
     margin-top: 100px;

@@ -3,7 +3,7 @@ const navList = document.querySelector(".nav-list");
 const faqsAccordionHeader = document.querySelectorAll(
   ".faqs-accordion__header"
 );
-
+const strongHero = document.querySelectorAll(".hero strong");
 const handleClickMobileNavToggle = (e) => {
   mobile_nav_toggle.classList.toggle("open");
   navList.classList.toggle("active");
@@ -24,4 +24,16 @@ const handleClickAccordionHeader = (e) => {
 mobile_nav_toggle.addEventListener("click", handleClickMobileNavToggle);
 [...faqsAccordionHeader].forEach((item) => {
   item.addEventListener("click", handleClickAccordionHeader);
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const { target } = entry;
+    target.classList.toggle("active", entry.isIntersecting);
+    observer.unobserve(target);
+  });
+}, {});
+
+[...strongHero].forEach((item) => {
+  observer.observe(item);
 });
