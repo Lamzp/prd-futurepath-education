@@ -4,6 +4,8 @@ const faqsAccordionHeader = document.querySelectorAll(
   ".faqs-accordion__header"
 );
 const strongHero = document.querySelectorAll(".hero strong");
+const animationUp = document.querySelectorAll(".animation-up");
+
 const handleClickMobileNavToggle = (e) => {
   mobile_nav_toggle.classList.toggle("open");
   navList.classList.toggle("active");
@@ -36,4 +38,20 @@ const observer = new IntersectionObserver((entries) => {
 
 [...strongHero].forEach((item) => {
   observer.observe(item);
+});
+
+const animation = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const { target } = entry;
+      target.classList.toggle("is-active", entry.isIntersecting);
+      //nimation.unobserve(target);
+    });
+  },
+  {
+    rootMargin: "-10px",
+  }
+);
+[...animationUp].forEach((item) => {
+  animation.observe(item);
 });
