@@ -111,6 +111,12 @@ a {
   width: 30px;
   transform: rotate(-45deg) translate(1px, -5px);
 }
+.intro__btn-right,
+.our-manifesto__bottom,
+.our-manifesto__list-desc-bottom {
+  display: none;
+}
+
 /* end mobile navigation toggle */
 
 .even-column {
@@ -563,7 +569,7 @@ a {
   width: calc(100% / 3);
 }
 .location-image {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .location-image img {
@@ -856,7 +862,7 @@ a {
 }
 .faculty-intro__content {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .faculty-intro {
@@ -1115,7 +1121,517 @@ a {
   width: 100%;
   height: 100px;
 }
+@media screen and (max-width: 1199.98px) {
+  .more__container {
+    --padding: 50px;
+  }
 
+  /* page: about futurepath education */
+  .intro__container {
+    --max-width: 1199.98px;
+    --padding: 35px;
+
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin: 0 auto;
+  }
+  .read-our-manifesto h2 {
+    font-size: 110px;
+  }
+  .our-manifesto__right,
+  .our-manifesto {
+    height: auto;
+  }
+  .read-our-manifesto h2 {
+    font-size: 8rem;
+  }
+
+  .faculty-mentor__container {
+    width: 999px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .programmes__list {
+    margin-bottom: 40px;
+  }
+  .gallery__list {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+  .sign-up__content {
+    width: 40%;
+  }
+  .sign-up__desc {
+    width: 100%;
+  }
+  .sign-up__btn {
+    display: block;
+    margin: 20px auto 0;
+  }
+  .footer__support {
+    margin-right: 90px;
+  }
+  .faculty-mentor__container {
+    width: 900px;
+  }
+}
+/* 800 */
+@media screen and (max-width: 767.98px) {
+  /* class in HTML */
+  .container,
+  .programmes__container,
+  .futurepath__content {
+    --max-width: 767.98px;
+    --padding: 25px;
+
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin: 0 auto;
+    height: 100%;
+  }
+  .heading-h1 {
+    font-size: 6.4rem;
+  }
+  .desc {
+    font-size: 2.2rem;
+  }
+
+  .header .nav-list,
+  .header .btn.btn-header,
+  .header__btn-top {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .header .img {
+    width: 140px;
+  }
+  .header .nav-list.active {
+    position: fixed;
+    inset: 0;
+    background-color: #756b62b0;
+    display: flex;
+    flex-direction: column;
+    padding: 220px 0 0 35px;
+    transition: all 0.25s linear;
+    z-index: 98;
+  }
+  .header.home {
+    padding-bottom: 110px;
+  }
+
+  .hero__heading {
+    width: 680px;
+  }
+
+  .more__container {
+    --max-width: 767.98px;
+    --padding: 40px;
+
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin: 0 auto;
+  }
+  .more__content p {
+    font-size: 12rem;
+  }
+  .more__intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .more__left {
+    width: 100%;
+  }
+  .more__left button {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .more__img {
+    width: 390px;
+    height: 390px;
+  }
+  .more__scrolling {
+    height: 260px;
+  }
+  .more__strong {
+    margin-bottom: 25px;
+  }
+  .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  /* page: about futurepath education */
+  .header.about-education .about-us {
+    padding: 70px 0 80px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-us__left {
+    width: 80%;
+  }
+  .about-us__right {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .intro__content {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .intro__left {
+    width: 80%;
+  }
+  .intro__avatar {
+    margin: 0 auto;
+  }
+  .intro__btn-left,
+  .our-manifesto__list-desc-top {
+    display: none;
+  }
+  .intro__right {
+    margin-top: 70px;
+  }
+  .our-manifesto {
+    padding-bottom: 120px;
+  }
+  .our-manifesto__even {
+    flex-direction: column;
+  }
+  .our-manifesto__left,
+  .our-manifesto__right {
+    width: 100%;
+  }
+  .our-manifesto__left {
+    padding: 30px 0 0 0;
+  }
+  .our-manifesto__right {
+    margin-top: 50px;
+    height: 500px;
+  }
+  .our-manifesto__bottom,
+  .our-manifesto__list-desc-bottom {
+    display: block;
+  }
+  .our-manifesto__list-desc-bottom {
+    margin-top: 20px;
+  }
+  .our-manifesto__top {
+    display: none;
+  }
+  .our-manifesto__heading {
+    margin-bottom: 40px;
+  }
+  .our-manifesto__flex {
+    flex-direction: column;
+  }
+  .our-manifesto.our-manifesto--light {
+    padding-bottom: 0px;
+  }
+
+  .read-our-manifesto h2 {
+    font-size: 6.4rem;
+  }
+  /* page: why us */
+  .why {
+    flex-direction: column;
+    align-items: center;
+  }
+  .why__left,
+  .why__right {
+    width: 100%;
+  }
+  /* page: location */
+  .location {
+    flex-direction: column;
+  }
+  .location__heading,
+  .location__desc {
+    width: 80%;
+  }
+  .location__heading {
+    margin-bottom: 50px;
+  }
+  .location__desc:last-child {
+    margin: 20px 0 0;
+  }
+  .location-image {
+    height: 70%;
+  }
+  .heading-secondary.read-our-manifesto__heading--amazing {
+    font-size: 6.6rem;
+  }
+
+  .faculty-mentor__content {
+    flex-direction: column;
+  }
+  .faculty-mentor__container {
+    width: 767px;
+    width: min(100% - 20px * 2);
+    margin: 0 auto;
+  }
+  .faculty-mentor__right {
+    margin: 120px auto 0;
+  }
+  .faculty-mentor__img {
+    height: 535px;
+  }
+  /* footer */
+  .footer__top,
+  .sign-up,
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .sign-up__desc {
+    width: 100%;
+  }
+  .footer__sup-contact {
+    display: flex;
+  }
+  .footer__support {
+    margin-right: 40px;
+  }
+  .sign-up__content {
+    width: 80%;
+  }
+  .footer__img {
+    width: 100%;
+    height: 90px;
+  }
+  .sign-up__form {
+    margin: 45px 0 30px 0;
+  }
+  .sign-up__input {
+    display: block;
+    margin: 0 auto;
+  }
+  .sign-up__btn {
+    display: block;
+    margin: 30px auto 0;
+  }
+  .sign-up__input {
+    min-width: 350px;
+  }
+  .footer__find-your-future {
+    margin: 20px auto 0;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .sign-up__content {
+    width: 80%;
+  }
+  .faculty-mentor__container-logo {
+    margin-bottom: 80px;
+  }
+  .faculty-mentor__img {
+    height: 448px;
+    width: 320px;
+  }
+  .faculty-mentor__logo {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  /* class in HTML */
+  .container,
+  .programmes__container,
+  .futurepath__content {
+    --max-width: 479.98px;
+    --padding: 20px;
+
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin: 0 auto;
+    height: 100%;
+  }
+  .desc {
+    font-size: 1.9rem;
+  }
+  .strong {
+    font-size: 1.9rem;
+  }
+  .heading-primary {
+    font-size: 3.8rem;
+  }
+  .heading-h1 {
+    font-size: 5rem;
+  }
+  .heading-secondary.read-our-manifesto__heading--amazing {
+    font-size: 2.8rem;
+
+    margin-bottom: 20px;
+  }
+  .header.home {
+    padding-bottom: 75px;
+  }
+  .header .nav-list,
+  .header .btn.btn-header,
+  .header__btn-top {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .header .img {
+    width: 100px;
+  }
+  .header .nav-list.active {
+    position: fixed;
+    inset: 0;
+    background-color: #756b62b0;
+    display: flex;
+    flex-direction: column;
+    padding: 220px 0 0 35px;
+    transition: all 0.25s linear;
+    z-index: 98;
+  }
+
+  /* hero */
+  .hero__heading {
+    width: auto;
+  }
+
+  .more__container {
+    --max-width: 479.98px;
+    --padding: 20px;
+
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin: 0 auto;
+  }
+  .more__intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .more__left {
+    width: 100%;
+  }
+  .more__left button {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .more__img {
+    width: 270px;
+    height: 270px;
+  }
+  .more__content p {
+    font-size: 8rem;
+  }
+  .more__scrolling {
+    height: 130px;
+  }
+  .more__strong {
+    margin-bottom: 25px;
+  }
+
+  /* programmes */
+  .programmes {
+    padding-bottom: 50px;
+  }
+  .programmes button {
+    width: 80%;
+  }
+  .programmes__list {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .futurepath__heading-secondary {
+    font-size: 45px;
+  }
+  .futurepath {
+    padding: 50px 0 70px;
+  }
+  /* gallery */
+  .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery__item {
+    height: 208px;
+  }
+
+  /* page: about futurepath education */
+  .about-us__left,
+  .intro__left {
+    width: 100%;
+  }
+  .our-manifesto__desc {
+    font-size: 1.6rem;
+  }
+  .our-manifesto__right {
+    height: 343px;
+  }
+
+  .why {
+    padding: 50px 0 70px 0;
+  }
+  .location-image {
+    width: 100%;
+    height: 290px;
+  }
+  .location__heading,
+  .location__desc {
+    width: 100%;
+  }
+  .location__desc {
+    font-size: 1.6rem;
+  }
+
+  .faculty-intro__content {
+    height: 100%;
+  }
+  .faculty-mentor__left {
+    width: 90%;
+  }
+  .faculty-mentor__img {
+    height: 360px;
+    width: 280px;
+  }
+  .faculty-mentor__right {
+    margin: 15px auto 0;
+  }
+  .faculty-intro__heading {
+    bottom: 40px;
+  }
+  .faculty-mentor__logo {
+    height: 50px;
+  }
+
+  /* footer */
+  .footer__top,
+  .sign-up,
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .sign-up__desc {
+    width: 100%;
+  }
+  .footer__sup-contact {
+    display: flex;
+  }
+  .footer__support {
+    margin-right: 40px;
+  }
+  .footer__img {
+    width: 100%;
+    height: 90px;
+  }
+  .sign-up__form {
+    margin: 45px 0 30px 0;
+  }
+  .sign-up__input {
+    display: block;
+    margin: 0 auto;
+  }
+  .sign-up__btn {
+    display: block;
+    margin: 30px auto 0;
+  }
+  .sign-up__input {
+    min-width: 350px;
+  }
+  .footer__find-your-future {
+    margin: 20px auto 0;
+  }
+}
 @media screen and (max-width: 431.98px) {
   /* class in HTML */
   .container,
@@ -1240,7 +1756,7 @@ a {
     margin: 0;
   }
   .location-image {
-    width: 100vw;
+    width: 100%;
     height: 235px;
   }
   .location-image img {
@@ -1286,6 +1802,10 @@ a {
   .more__strong {
     margin-bottom: 25px;
   }
+  .intro__avatar {
+    width: 320px;
+    height: 320px;
+  }
 
   /* programmes */
   .programmes {
@@ -1307,14 +1827,6 @@ a {
   }
   .futurepath__heading-secondary {
     font-size: 3.2rem;
-  }
-  /* gallery */
-  .gallery__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .gallery__item {
-    height: 208px;
   }
   /* end component */
   /* footer */
@@ -1343,6 +1855,7 @@ a {
   .sign-up__input {
     display: block;
     margin: 0 auto;
+    min-width: 280px;
   }
   .sign-up__btn {
     display: block;
@@ -1424,10 +1937,30 @@ a {
     display: block;
     margin-top: 34px;
   }
+  .footer__img {
+    width: 100%;
+    height: 67px;
+  }
   .footer__find-your-future {
     margin: 20px auto 0;
   }
   .sign-up__input {
     min-width: 200px;
+  }
+  .intro__avatar {
+    width: 233px;
+    height: 233px;
+  }
+  .read-our-manifesto h2 {
+    font-size: 50px;
+  }
+  .our-manifesto__right {
+    height: 264px;
+  }
+  .our-manifesto {
+    padding-bottom: 40px;
+  }
+  .intro {
+    padding: 60px 0 40px 0;
   }
 }
