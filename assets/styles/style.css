@@ -395,12 +395,56 @@ a {
 }
 .intro {
   background-color: var(--clr-secondary);
+  padding: 110px 0 100px 0;
+}
+.intro__container {
+  --max-width: 1200px;
+
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 .intro__content {
   display: flex;
+  justify-content: space-between;
 }
 .intro__left {
   width: 50%;
+}
+.intro__ask {
+  font-size: 4.8rem;
+  color: black;
+  max-width: 414px;
+}
+.intro__desc {
+  font-size: 1.6rem;
+  font-family: var(--ff-system);
+  margin-top: 30px;
+}
+.intro__right {
+  margin-top: 155px;
+}
+.intro__michael {
+  text-align: center;
+}
+.intro__avatar {
+  width: 370px;
+  height: 370px;
+}
+.intro__img {
+  border-radius: 25px;
+}
+.intro__name {
+  font-size: 2.9rem;
+  margin: 15px 0 30px 0;
+  letter-spacing: var(--lts-005);
+}
+.intro__prime {
+  font-size: 2rem;
+}
+.intro__btn {
+  margin-top: 55px;
+  width: 230px;
+  height: 72px;
 }
 /* end page: about futurepath programmes */
 
@@ -594,6 +638,9 @@ a {
 .header .nav-item .nav-link:hover:before {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+.header .nav-item .nav-link.active:before {
+  transform: scaleX(1);
 }
 
 .header .nav-list .nav-link {
@@ -1300,5 +1347,87 @@ a {
   .sign-up__btn {
     display: block;
     margin: 30px auto 0;
+  }
+}
+@media screen and (max-width: 319.98px) {
+  /* class in HTML */
+  .container,
+  .programmes__container,
+  .futurepath__content {
+    --max-width: 319.98px;
+    --padding: 16px;
+
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin: 0 auto;
+    height: 100%;
+  }
+  .desc {
+    font-size: 1.6rem;
+  }
+  .strong {
+    font-size: 1.5rem;
+  }
+  .heading-primary {
+    font-size: 2.8rem;
+  }
+
+  /* hero */
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero .desc {
+    font-size: 1.6rem;
+    margin-top: 12px;
+  }
+  .hero .info {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+
+  .programmes__strong {
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
+  }
+  .programmes__item-list {
+    font-size: 1.6rem;
+  }
+
+  .futurepath {
+    padding: 40px 0 60px 0;
+  }
+  .futurepath__heading-secondary {
+    font-size: 2.8rem;
+  }
+
+  .gallery__item {
+    height: 151px;
+  }
+
+  .footer {
+    padding: 30px 0 20px 0;
+  }
+  .footer__email-admin {
+    margin-top: 5px;
+    font-size: 1.3rem;
+  }
+  .footer__support {
+    margin-top: 30px;
+    margin-right: 30px;
+  }
+  .footer__contact {
+    margin-top: 10px;
+  }
+  .footer__item {
+    font-size: 1.4rem;
+  }
+  .footer__logo {
+    display: block;
+    margin-top: 34px;
+  }
+  .footer__find-your-future {
+    margin: 20px auto 0;
+  }
+  .sign-up__input {
+    min-width: 200px;
   }
 }

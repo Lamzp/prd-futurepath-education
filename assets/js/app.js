@@ -5,6 +5,7 @@ const faqsAccordionHeader = document.querySelectorAll(
 );
 const strongHero = document.querySelectorAll(".hero strong");
 const animationUp = document.querySelectorAll(".animation-up");
+const navLink = document.querySelectorAll(".nav-link");
 
 const handleClickMobileNavToggle = (e) => {
   mobile_nav_toggle.classList.toggle("open");
@@ -22,7 +23,13 @@ const handleClickAccordionHeader = (e) => {
   const ic = e.target.querySelector(".faqs-accordion__icon");
   ic.classList.toggle("rotate");
 };
+const handleClickNavLink = (e) => {
+  e.target.classList.add("active");
+};
 
+[...navLink].forEach((item) => {
+  item.addEventListener("click", handleClickNavLink);
+});
 mobile_nav_toggle.addEventListener("click", handleClickMobileNavToggle);
 [...faqsAccordionHeader].forEach((item) => {
   item.addEventListener("click", handleClickAccordionHeader);
