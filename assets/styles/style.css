@@ -111,7 +111,7 @@ a {
   width: 30px;
   transform: rotate(-45deg) translate(1px, -5px);
 }
-.intro__btn-right,
+.intro__btn.intro__btn-right,
 .our-manifesto__bottom,
 .our-manifesto__list-desc-bottom {
   display: none;
@@ -331,17 +331,19 @@ a {
   background-color: var(--clr-text-primary);
 }
 .read-our-manifesto h2 {
-  font-size: 15.4rem;
+  font-size: 6.8rem;
+  line-height: var(--lh--13);
   letter-spacing: 0.05em;
   color: black;
+  margin-bottom: 55px;
 }
 .read-our-manifesto__content {
-  max-width: 842px;
+  max-width: 830px;
   margin: 0 auto;
 }
 .read-our-manifesto__btn {
-  border-color: var(--clr-secondary);
-  color: var(--clr-secondary);
+  width: 227px;
+  height: 70px;
 }
 .read-our-manifesto__btn span {
   color: inherit;
@@ -355,7 +357,7 @@ a {
 
 .our-manifesto {
   background-color: var(--clr-text-primary);
-  /* height: 100vh; */
+  height: 768px;
 }
 .our-manifesto__right {
   width: calc(100% / 2);
@@ -364,13 +366,18 @@ a {
   height: 100%;
   margin-left: auto;
 }
+.our-manifesto__link {
+  text-decoration: dashed;
+}
 .our-manifesto__left {
   padding: 135px 0 0 60px;
-  width: 32.6%;
+  width: 40%;
 }
 .our-manifesto__heading {
   color: var(--clr-primary);
   line-height: 1.3;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
 .our-manifesto__desc {
   font-size: 1.8rem;
@@ -379,7 +386,7 @@ a {
 .our-manifesto__strong {
   font-size: 2.2rem;
   color: var(--clr-secondary);
-  padding: 10px 0 20px 0;
+  padding: 0px 0 20px 0;
 }
 .our-manifesto__flex {
   display: flex;
@@ -1025,7 +1032,40 @@ a {
   padding: 15px;
 }
 /* end page: contact-us */
-
+/* page: terms-conditions */
+.terms-conditions {
+  background-color: var(--clr-text-primary);
+}
+.terms-conditions__ol[role="list"] {
+  list-style-type: decimal;
+}
+.terms-conditions__three-nav {
+  list-style-type: circle;
+}
+.terms-conditions__ol {
+  padding-left: 60px;
+}
+.terms-conditions__sub-nav {
+  list-style-type: disc;
+}
+.terms-conditions__container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.terms-conditions__heading {
+  color: var(--clr-primary);
+}
+.terms-conditions__desc {
+  font-family: var(--ff-system);
+  font-size: 1.5rem;
+}
+.terms-conditions__ol > li::marker {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-family: var(--ff-system);
+  letter-spacing: var(--lts-005);
+  margin-right: 30px;
+}
 /* footer */
 .footer {
   background-color: var(--clr-primary);
@@ -1137,9 +1177,8 @@ a {
   .read-our-manifesto h2 {
     font-size: 110px;
   }
-  .our-manifesto__right,
   .our-manifesto {
-    height: auto;
+    height: 768px;
   }
   .read-our-manifesto h2 {
     font-size: 8rem;
