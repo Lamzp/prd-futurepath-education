@@ -26,25 +26,26 @@
 
                 <ul role="list" class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link active">About</a>
                         <ul class="sub-nav" role="list">
                             <li class="nav-item"><a href="./about-futurepath-education.html" class="nav-link">About
                                     Futurepath Education
                                 </a></li>
-                            <li class="nav-item"><a href="./why-us.html" class="nav-link">Why Us?</a></li>
+                            <li class="nav-item"><a href="./why-us.html" class="nav-link active">Why Us?</a></li>
                             <li class="nav-item"><a href="./location.html" class="nav-link">Location</a></li>
                             <li class="nav-item"><a href="./faculty.html" class="nav-link">Faculty</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="./our-programmes.html" class="nav-link">Our Programmes</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Consult</a></li>
+                    <li class="nav-item"><a href="./consult.html" class="nav-link">Consult</a></li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Help & FAQs</a>
                         <ul class="sub-nav" role="list">
-                            <li class="nav-item"><a href="#" class="nav-link">Academic Information</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Pastoral Information</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Join Our Team</a></li>
+                            <li class="nav-item"><a href="./academic-information.html" class="nav-link">Academic
+                                    Information</a></li>
+                            <li class="nav-item"><a href="./pastoral-information.html" class="nav-link">Pastoral
+                                    Information</a></li>
+                            <li class="nav-item"><a href="./contact-us.html" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item"><a href="./join-our-team.html" class="nav-link">Join Our Team</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -57,7 +58,7 @@
             <div class="terms-conditions__content">
                 <h1 class="terms-conditions__heading | heading-primary">Terms & Conditions</h1>
 
-                <span class="terms-conditions__day">Last updated Feb 17, 2023
+                <span class="terms-conditions__day terms-conditions__day--top">Last updated Feb 17, 2023
                 </span>
 
                 <div class="terms-conditions__roles">
@@ -799,18 +800,61 @@
                             <ul role="list">
                                 <li>
                                     <p class="terms-conditions__desc | desc">
-                                        The course fee is due and payable in full according to the terms of the invoice.
-                                        The payment date is deﬁned as the date at which the payment is credited to the
-                                        Futurepath Education account speciﬁed in the enrolment confirmation. The money
-                                        transfer must indicate the Course Student‘s name.
+                                        Where applicable, it is the responsibility of the Student to ensure that they
+                                        have the appropriate visa documentation to study in the UK for the duration of
+                                        the Course dates as having the relevant paperwork required to satisfy all UK
+                                        entrance and residence requirements. No refund will be issued to the Student if
+                                        they fail to procure the necessary visa, residency or travel documentation or
+                                        fail to comply with any other requirements in order to attend the Course. We do
+                                        not accept any responsibility if you cannot travel, or incur any other loss
+                                        because you have not complied with any passport, visa, immigration requirements
+                                        or health formalities. You agree to reimburse us in relation to any fines or
+                                        other losses, which we incur as a result of your failure to comply with any
+                                        passport, visa, immigration requirements or health formalities.
                                     </p>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <p class="terms-conditions__desc | desc">Our Futurepath Pledge</p>
+
+                            <ul class="terms-conditions__sub-nav">
+                                <p class="terms-conditions__desc | desc">
+                                    For students to be eligible for a guarantee claim, they will need to have ensured
+                                    and considered the following:
+                                </p>
+                                <li>
+                                    <p class="terms-conditions__desc | desc">
+                                        Students must have completed their course in full and taken part in all classes,
+                                        and activities before making a claim
+                                    </p>
+
+
+                                </li>
+                                <li>
+                                    <p class="terms-conditions__desc | desc">
+                                        If average student feedback is at least 9/10 for students in their class/cohort,
+                                        the guarantee offer cannot be granted in full
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="terms-conditions__desc | desc">
+                                        If a student cannot show email communications or tangible proof to justify their
+                                        grievance the pledge offer cannot be granted in full
+                                    </p>
+                                </li>
+                            </ul>
                         </li>
                     </ol>
+                </div>
+
+                <span class="terms-conditions__day terms-conditions__day--bottom">Last updated Feb 17, 2023
+                </span>
+
+                <div class="terms-conditions__list-link">
+                    <span class="terms-conditions__link">Terms & Conditions</span>
+                    <span class="terms-conditions__link">Privacy Policy</span>
+                    <span class="terms-conditions__link">Complaints Policy</span>
                 </div>
             </div>
         </div>
@@ -818,7 +862,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
-                <h2 class="footer__heading heading-primary">STAY UPDATED</h2>
+                <h2 class="footer__heading heading-primary animation-up">STAY UPDATED</h2>
 
                 <div class="sign-up">
                     <div class="sign-up__content">
@@ -830,7 +874,7 @@
                     </div>
                     <form action="" class="sign-up__form">
                         <input type="text" placeholder="Email Address" class="sign-up__input">
-                        <button class="btn btn-dark sign-up__btn">Sign Up</button>
+                        <button class="btn btn--dark sign-up__btn"><span>Sign Up</span></button>
                     </form>
                 </div>
             </div>
@@ -838,34 +882,39 @@
             <div class="footer__light"></div>
 
             <div class="footer__bottom">
-                <div class="footer__support">
-                    <h2 class="heading-primary">
-                        SUPPORT
-                    </h2>
-                    <div class="footer__list">
-                        <a href="#!" class="footer__item"><span>Terms and Conditions</span></a>
-                        <a href="#!" class="footer__item"><span>Privacy Policy</span></a>
-                        <a href="#!" class="footer__item"><span>Complaints Policy</span></a>
-                        <a href="#!" class="footer__item"><span>FAQs</spa></a>
+                <div class="footer__sup-contact">
+                    <div class="footer__support">
+                        <h2 class="heading-primary animation-up">
+                            SUPPORT
+                        </h2>
+                        <div class="footer__list">
+                            <a href="./terms-conditions.html" class="footer__item"><span>Terms and Conditions</span></a>
+                            <a href="./privacy-policy.html" class="footer__item"><span>Privacy Policy</span></a>
+                            <a href="./complaints.html" class="footer__item"><span>Complaints Policy</span></a>
+                            <a href="./pages/faqs.html" class="footer__item"><span>FAQs</span></a>
+                        </div>
+                    </div>
+                    <div class="footer__contact">
+                        <h2 class="heading-primary animation-up">
+                            CONTACT
+                        </h2>
+                        <strong class="footer__email-admin">admin@futurepath.education</strong>
                     </div>
                 </div>
-                <div class="footer__contact">
-                    <h2 class="heading-primary">
-                        CONTACT
-                    </h2>
-                    <strong class="footer__email-admin">admin@futurepath.education</strong>
-                </div>
+
                 <div class="footer__find-your-future">
-                    <h2 class="heading-primary">
-                        FIND-YOUR-FUTURE.
+                    <h2 class="heading-primary animation-up">
+                        FIND YOUR FUTURE.
                     </h2>
-                    <a href="" class="footer__logo">
+                    <a href="../index.html" class="footer__logo">
                         <img src="../assets/images/Logo.png" alt="" class="footer__img">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="../assets/js/app.js"></script>
 </body>
 
 </html>
