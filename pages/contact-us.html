@@ -67,47 +67,49 @@
 
     <form action="" class="form">
         <div class="form__group">
-            <span class="form__title-full-name">Full Name *</span>
+            <span class="form-style__label">Full Name *</span>
             <div class="form__full-name">
                 <div class="form__first-name">
                     <input type="text" id="first_name" placeholder="Enter the fist name...">
-                    <label for="first_name">First Name</label>
+                    <label for="first_name" class="form-style__label--small">First Name</label>
                 </div>
                 <div class="form__last-name">
                     <input type="text" id="last_name" placeholder="Enter the last name...">
-                    <label for="last_name">Last Name</label>
+                    <label for="last_name" class="form-style__label--small">Last Name</label>
                 </div>
             </div>
-            <div class="form__email">
-                <label for="email">Email *</label>
+
+
+            <div class="form__once-input">
+                <label for="email" class="form-style__label">Email *</label>
                 <input type="email" placeholder="email@gmail.com...">
             </div>
 
             <div class="form__ask">
-                <span>What Would You Like To Ask About? *</span>
+                <span class="form-style__label">What Would You Like To Ask About? *</span>
                 <select name="" id="">
-                    <option value="">Lorem ipsum dolor sit amet.</option>
-                    <option value="">Lorem ipsum dolor sit amet.</option>
-                    <option value="">Lorem ipsum dolor sit amet.</option>
-                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">New Enrolment For Residential Course</option>
+                    <option value="">Existing Enrolment For Residential Course</option>
+                    <option value="">Online Consultation</option>
+                    <option value="">Something Else</option>
                 </select>
             </div>
             <div class="form__ask">
-                <span>Are You...? *</span>
+                <span class="form-style__label">Are You...? *</span>
                 <select name="" id="">
-                    <option value="">Lorem ipsum dolor sit amet.</option>
-                    <option value="">Lorem ipsum dolor sit amet.</option>
-                    <option value="">Lorem ipsum dolor sit amet.</option>
-                    <option value="">Lorem ipsum dolor sit amet.</option>
+                    <option value="">A Student</option>
+                    <option value="">A Parent</option>
+                    <option value="">A School Advisor/Counsellor</option>
+                    <option value="">An Educational Agent</option>
                 </select>
             </div>
 
             <div class="form__message">
-                <label for="">Your Message *</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label for="message" class="form-style__label">Your Message *</label>
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
             </div>
 
-            <button class="btn btn--light">Send</button>
+            <button class="btn btn--light form__send"><span>Send</span></button>
         </div>
 
 

@@ -624,10 +624,13 @@ a {
 .header .sub-nav .nav-item {
   padding-left: 15px;
 }
-.header .nav-item .nav-link {
+.header .nav-item .nav-link,
+.enroll-header__link span {
+  display: inline-block;
   position: relative;
 }
-.header .nav-item .nav-link::before {
+.header .nav-item .nav-link::before,
+.enroll-header__link span::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -640,10 +643,12 @@ a {
   transition: transform 250ms;
 }
 
-.header .nav-item .nav-link:hover:before {
+.header .nav-item .nav-link:hover:before,
+.enroll-header__link span:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .header .nav-item .nav-link.active:before {
   transform: scaleX(1);
 }
@@ -1108,23 +1113,24 @@ a {
   justify-content: space-between;
   gap: 15px;
 }
-.form__full-name label {
-  margin-top: 10px;
-}
 .form__first-name,
 .form__last-name {
   width: calc(100% / 2);
 }
-.form__email {
-  margin-top: 30px;
+.form__once-input,
+.form__ask {
+  padding: 15px 0;
 }
-.form__email label {
+.form-style__label {
   font-size: 2rem;
   letter-spacing: var(--lts-005);
 }
+.form-style__label--small {
+  font-size: 1.6rem;
+}
 .form__message textarea {
   width: calc(100% -30px);
-  height: 200px;
+  height: 150px;
 }
 .form__ask span {
   display: block;
@@ -1141,6 +1147,10 @@ a {
   margin-top: 15px;
   display: inline-block;
   padding: 15px;
+}
+.form__send {
+  display: block;
+  margin: 50px auto 0;
 }
 /* end page: contact-us */
 /* page: terms-conditions */
@@ -1302,6 +1312,106 @@ a {
   height: 75px;
   width: 250px;
 }
+/* enroll */
+.enroll-header {
+  background-color: var(--clr-text-primary);
+}
+.enroll-product {
+  padding: 0 0 190px 0;
+  background-color: var(--clr-text-primary);
+}
+.enroll__list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+.enroll__line {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--clr-placeholder);
+}
+
+.enroll__item {
+}
+.enroll__img {
+  height: 435px;
+}
+.enroll-product__heading {
+  margin-top: 20px;
+  color: #cfd3eb;
+  font-size: 4rem;
+  text-align: center;
+}
+.enroll-header {
+  padding: 50px 0;
+}
+.enroll-header__content {
+  text-align: center;
+}
+.enroll-header__link span {
+  color: #cfd3eb;
+  font-size: 2.4rem;
+}
+.enroll__mid-link {
+  font-size: 2.2rem;
+  margin: 0 15px;
+  color: var(--clr-placeholder);
+}
+.enroll-sell {
+  background-color: var(--clr-text-primary);
+  padding: 0 0 120px 0;
+}
+.enroll-sell__list {
+  display: flex;
+  justify-content: space-between;
+}
+.enroll-sell__left {
+  width: 50%;
+}
+.enroll-sell__heading {
+  line-height: 1.3;
+  color: #cfd3eb;
+  font-size: 7rem;
+}
+.enroll-sell__price {
+  margin: 30px 0 20px 0;
+  color: #cfd3eb;
+  font-size: 3.8rem;
+}
+.enroll-sell__desc p {
+  color: #cfd3eb;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+.enroll-sell__label {
+  color: #cfd3eb;
+  font-family: var(--ff-system);
+}
+.enroll-sell__quantity {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.enroll-sell__input {
+  display: inline-block;
+  width: 100px;
+  padding: 20px 0 20px 10px;
+  font-size: 2.2rem;
+  font-family: var(--ff-system);
+  margin: 0 0 40px 0;
+}
+.enroll-sell__btn {
+  width: 240px;
+}
+.enroll-sell__desc p:last-child {
+  margin-top: 20px;
+}
+.enroll-sell__img {
+  margin-top: 100px;
+  width: 40%;
+  height: 570px;
+}
 /* footer */
 .footer {
   background-color: var(--clr-primary);
@@ -1422,6 +1532,12 @@ a {
   .faculty-mentor__container {
     width: 999px;
   }
+  .enroll__img {
+    height: 345px;
+  }
+  .enroll__list {
+    gap: 35px;
+  }
 }
 @media screen and (max-width: 1023.98px) {
   .container {
@@ -1462,6 +1578,12 @@ a {
   }
   .pastoral__desc {
     font-size: 2rem;
+  }
+  .enroll-sell__heading {
+    font-size: 5.5rem;
+  }
+  .enroll-sell__img {
+    width: 45%;
   }
 }
 @media screen and (max-width: 899.98px) {
@@ -1507,6 +1629,29 @@ a {
   .footer__img {
     height: 80px;
   }
+  .enroll__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .enroll-product__heading {
+    font-size: 3rem;
+  }
+  .enroll-sell__heading {
+    font-size: 4.4rem;
+  }
+  .enroll-sell__price {
+    margin: 20px 0 15px 0;
+    font-size: 3rem;
+  }
+  .enroll-sell__desc p {
+    font-size: 2rem;
+  }
+  .enroll-sell__quantity {
+    margin-top: 30px;
+  }
+  .enroll-sell__input {
+    padding: 15px 0 15px 5px;
+    margin: 0 0 25px 0;
+  }
 }
 
 @media screen and (max-width: 799.98px) {
@@ -1542,6 +1687,13 @@ a {
   }
   .heading-primary {
     font-size: 6rem;
+  }
+  .enroll-sell__heading {
+    font-size: 3.8rem;
+  }
+  .enroll-sell__price {
+    margin: 10px 0 7px 0;
+    font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -1661,8 +1813,9 @@ a {
   }
   .our-manifesto {
     padding-bottom: 120px;
-    /* height: 910px; */
+    padding: 0;
   }
+
   .our-manifesto__even {
     flex-direction: column;
   }
@@ -1825,6 +1978,32 @@ a {
   .hero__heading {
     width: 540px;
   }
+  .enroll__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 65px;
+  }
+  .enroll-sell__list {
+    flex-direction: column-reverse;
+  }
+  .enroll-sell__img,
+  .enroll-sell__left {
+    width: 100%;
+  }
+  .enroll-sell__left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .enroll-sell__price {
+    margin: 20px 0 30px 0;
+  }
+  .enroll-sell__quantity {
+    order: 2;
+  }
+  .enroll-sell__desc {
+    margin-top: 30px;
+    order: 3;
+  }
 }
 @media screen and (max-width: 479.98px) {
   /* class in HTML */
@@ -1881,6 +2060,18 @@ a {
   }
   .product-nav__text {
     font-size: 2.8rem;
+  }
+  .enroll-sell__price {
+    margin: 10px 0 0px 0;
+  }
+  .enroll-header {
+    padding: 0px 0;
+  }
+  .enroll-sell__heading {
+    font-size: 3.2rem;
+  }
+  .enroll-sell__quantity {
+    margin-top: 10px;
   }
 
   /* hero */
@@ -2278,6 +2469,31 @@ a {
   .privacy-policy__desc {
     font-size: 1.4rem;
   }
+  .enroll-product__heading {
+    font-size: 2.2rem;
+  }
+  .enroll__list {
+    gap: 25px;
+  }
+  .enroll-product {
+    padding: 0 0 110px 0;
+  }
+  .enroll-sell__img {
+    height: 420px;
+  }
+  .enroll-sell__heading {
+    font-size: 2.8rem;
+  }
+  .enroll-sell__price {
+    font-size: 2rem;
+  }
+  .enroll-sell__input {
+    padding: 5px 0 5px 0px;
+    margin: 0 0 25px 0;
+  }
+  .enroll-sell__desc p {
+    font-size: 1.8rem;
+  }
   /* footer */
   .footer__top,
   .sign-up,
@@ -2372,6 +2588,12 @@ a {
 
   .terms-conditions__desc {
     font-size: 1.4rem;
+  }
+  .enroll__img {
+    height: 270px;
+  }
+  .enroll-product__heading {
+    font-size: 1.8rem;
   }
 
   .footer {

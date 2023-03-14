@@ -62,3 +62,19 @@ const animation = new IntersectionObserver(
 [...animationUp].forEach((item) => {
   animation.observe(item);
 });
+
+const name = document.querySelector(".enroll-sell__heading");
+const price = document.querySelector(".enroll-sell__price");
+const formSell = document.querySelector(".enroll-sell__quantity");
+const products = JSON.parse(localStorage.getItem("products")) || [];
+formSell.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const product = {
+    name: name.innerHTML,
+    price: price.innerHTML,
+    quantity: e.target.elements.quantity.value,
+  };
+
+  products.push(product);
+  localStorage.setItem("products", JSON.stringify(products));
+});
