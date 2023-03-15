@@ -1,3 +1,17 @@
+// if number cart > 0 hidden icon cart
+if (cartLS.list().length > 0) {
+  const divCartFixed = document.createElement("div");
+  const body = document.body;
+  body.appendChild(divCartFixed);
+  divCartFixed.classList.add("cart-fixed");
+  divCartFixed.innerHTML = `
+    <a href="./pages/products-cart.html">
+      <span class="cart-fixed__quantity">${cartLS.list().length}</span>
+      <i class="fa-solid fa-cart-shopping cart-fixed__ic"></i>
+    </a>
+`;
+}
+
 const mobile_nav_toggle = document.querySelector(".mobile-nav-toggle");
 const navList = document.querySelector(".nav-list");
 const faqsAccordionHeader = document.querySelectorAll(
@@ -63,18 +77,26 @@ const animation = new IntersectionObserver(
   animation.observe(item);
 });
 
-const name = document.querySelector(".enroll-sell__heading");
-const price = document.querySelector(".enroll-sell__price");
+const idP = document.querySelector(".enroll-sell__id");
+const nameP = document.querySelector(".enroll-sell__heading");
+const priceP = document.querySelector(".enroll-sell__price-num")?.textContent;
+const imgP = document.querySelector(".enroll-sell__img img");
 const formSell = document.querySelector(".enroll-sell__quantity");
-const products = JSON.parse(localStorage.getItem("products")) || [];
+
+// submit to add Local
 formSell.addEventListener("submit", (e) => {
   e.preventDefault();
-  const product = {
-    name: name.innerHTML,
-    price: price.innerHTML,
-    quantity: e.target.elements.quantity.value,
-  };
 
-  products.push(product);
-  localStorage.setItem("products", JSON.stringify(products));
+  const price = +priceP.split(",").join("");
+  const img = imgP.getAttribute("src");
+  const quantity = +e.target.elements.quantity.value;
+  const id = +e.target.elements.id.value;
+  console.log(quantity);
+  const product = {
+    id,
+    img,
+    name: nameP.textContent,
+    price: price,
+  };
+  cartLS.add(product, quantity);
 });

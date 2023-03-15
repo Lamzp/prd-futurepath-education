@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology__Enroll__Futurepath Education</title>
+    <title>Why Us </title>
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header class="header our-programmes">
+
+    <div class="loading">
+        <div class="loading__inner"></div>
+    </div>
+    <header class="header about-education">
         <!-- navigation-primary -->
         <div class="container">
             <nav class="navigation-primary">
@@ -36,7 +43,7 @@
                             <li class="nav-item"><a href="./faculty.html" class="nav-link">Faculty</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./our-programmes.html" class="nav-link active">Our Programmes</a></li>
+                    <li class="nav-item"><a href="./our-programmes.html" class="nav-link">Our Programmes</a></li>
                     <li class="nav-item"><a href="./consult.html" class="nav-link">Consult</a></li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Help & FAQs</a>
@@ -51,66 +58,34 @@
                     </li>
                 </ul>
 
-                <button class="btn btn--light btn-header"><span>Enroll</span></button>
+                <a href="./enroll.html"><button class="btn btn--light btn-header"><span>Enroll</span></button></a>
             </nav>
         </div>
     </header>
-
-    <section class="enroll-header">
+    <section class="product-cart">
         <div class="container">
-            <div class="enroll-header__content--left">
-                <a href="./enroll.html" class="enroll-header__link">
-                    <span>Enroll</span>
-                </a>
-                <span class="enroll__mid-link">></span>
-                <a href="./enroll.html" class="enroll-header__link">
-                    <span>DIGITAL DESIGN | 2023</span>
-                </a>
-            </div>
-        </div>
-    </section>
+            <div class="product-cart__content">
+                <h1 class="product-cart__heading">Shopping Cart</h1>
 
-    <section class="enroll-sell">
-        <div class="container">
-            <div class="enroll-sell__list">
+                <div class="product-cart__list">
 
-                <div class="enroll-sell__left">
-
-                    <div class="enroll-sell__info">
-                        <h1 class="enroll-sell__heading">DIGITAL DESIGN | 2023</h1>
-                        <p class="enroll-sell__price">SGD <span class="enroll-sell__price-num">3,725</span>.00</p>
-                    </div>
-
-                    <div class="enroll-sell__desc">
-                        <p>A digital designer is a versatile person who is able to create stunning graphics, make a dull
-                            page look aesthetic, create a new character for a game, and so much more. Digital designers
-                            are to thank for some of the world’s leading brands, games, apps, and art!</p>
-                        <p>Being a digital designer is one of the most creative growing fields in today’s modern world
-                            where everything is headed towards the digital age. The aim of this programme is to provide
-                            you with an in-depth understanding of what digital design entails with the skills and
-                            knowledge you can take away to pursue a wide range or careers
-                        </p>
-                    </div>
-
-                    <form class="enroll-sell__quantity">
-                        <input type="hidden" name="id" value="3" class="enroll-sell__id">
-                        <label class="enroll-sell__label" for="quantity" name="quantity">Quantity:</label>
-                        <input class="enroll-sell__input" type="number" id="quantity" min="1" value="1">
-                        <button class="btn btn--light enroll-sell__btn"><span>Enroll</span></button>
-                    </form>
                 </div>
 
-                <div class="enroll-sell__img">
-                    <img src="../assets/images/digital-design.jpg" alt="">
+                <div class="product-cart__checkout">
+                    <div class="product-cart__subtotal">
+                        <span class="product-cart__subtotal-text">Subtotal</span>
+                        <span class="product-cart__subtotal-price">SGD <span>29,800</spa>.00</span>
+                    </div>
+                    <a href="#!"><button
+                            class="btn btn--light product-cart__checkout-btn"><span>Ckeckout</span></button></a>
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
-                <h2 class="footer__heading heading-primary">STAY UPDATED</h2>
+                <h2 class="footer__heading heading-primary animation-up">STAY UPDATED</h2>
 
                 <div class="sign-up">
                     <div class="sign-up__content">
@@ -132,7 +107,7 @@
             <div class="footer__bottom">
                 <div class="footer__sup-contact">
                     <div class="footer__support">
-                        <h2 class="heading-primary">
+                        <h2 class="heading-primary animation-up">
                             SUPPORT
                         </h2>
                         <div class="footer__list">
@@ -143,7 +118,7 @@
                         </div>
                     </div>
                     <div class="footer__contact">
-                        <h2 class="heading-primary">
+                        <h2 class="heading-primary animation-up">
                             CONTACT
                         </h2>
                         <strong class="footer__email-admin">admin@futurepath.education</strong>
@@ -151,7 +126,7 @@
                 </div>
 
                 <div class="footer__find-your-future">
-                    <h2 class="heading-primary">
+                    <h2 class="heading-primary animation-up">
                         FIND YOUR FUTURE.
                     </h2>
                     <a href="../index.html" class="footer__logo">
@@ -161,9 +136,11 @@
             </div>
         </div>
     </footer>
+
     <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js"
         type="text/javascript"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/products-cart.js"></script>
 </body>
 
 </html>
