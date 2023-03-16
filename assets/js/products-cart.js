@@ -19,7 +19,7 @@ function render() {
                   <i onclick="plusProduct(${item.id})" class="fa-solid fa-plus product-cart__quantity-plus"></i>
               </div>
               <p class="product-cart__price-sum">SGD <span>${sumPrice}</span>.00</p>
-              <i class="fa-solid fa-xmark product-cart__close"></i>
+              <i onclick="deleteProduct(${item.id})" class="fa-solid fa-xmark product-cart__close"></i>
           </div>
         `);
   });
@@ -27,6 +27,20 @@ function render() {
 render();
 function minusProduct(id) {
   cartLS.quantity(id, -1);
+  productsCart.innerHTML = "";
+  setTimeout(() => {
+    location.reload();
+  }, 500);
+}
+function plusProduct(id) {
+  cartLS.quantity(id, 1);
+  productsCart.innerHTML = "";
+  setTimeout(() => {
+    location.reload();
+  }, 500);
+}
+function deleteProduct(id) {
+  cartLS.remove(id);
   productsCart.innerHTML = "";
   setTimeout(() => {
     location.reload();

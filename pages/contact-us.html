@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -65,13 +68,17 @@
         </div>
     </div>
 
-    <form action="" class="form">
+    <form action="" class="form" id="form-1">
         <div class="form__group">
             <span class="form-style__label">Full Name *</span>
+
             <div class="form__full-name">
                 <div class="form__first-name">
-                    <input type="text" id="first_name" placeholder="Enter the fist name...">
-                    <label for="first_name" class="form-style__label--small">First Name</label>
+                    <div class="form__container">
+                        <span class="form__message"></span>
+                        <input type="text" id="first_name" placeholder="Enter the fist name...">
+                        <label for="first_name" class="form-style__label--small">First Name</label>
+                    </div>
                 </div>
                 <div class="form__last-name">
                     <input type="text" id="last_name" placeholder="Enter the last name...">
@@ -81,8 +88,12 @@
 
 
             <div class="form__once-input">
-                <label for="email" class="form-style__label">Email *</label>
-                <input type="email" placeholder="email@gmail.com...">
+                <div class="form__container">
+
+                    <label for="email" class="form-style__label">Email *</label>
+                    <span class="form__message"></span>
+                    <input type="email" placeholder="email@gmail.com..." id="email">
+                </div>
             </div>
 
             <div class="form__ask">
@@ -166,7 +177,11 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js"
+        type="text/javascript"></script>
+    <script src="../assets/js/link-cart-page.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/form.js"></script>
 </body>
 
 </html>
