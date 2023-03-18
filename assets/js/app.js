@@ -6,6 +6,16 @@ const faqsAccordionHeader = document.querySelectorAll(
 const strongHero = document.querySelectorAll(".hero strong");
 const animationUp = document.querySelectorAll(".animation-up");
 const navLink = document.querySelectorAll(".nav-link");
+const navItem = document.querySelectorAll(".nav-list > .nav-item");
+
+[...navItem].forEach((item) => {
+  item.addEventListener("click", () => {
+    const subNav = item.querySelector(".sub-nav");
+    const ic = item.querySelector(".nav-item__icon");
+    ic.classList.toggle("is-active");
+    subNav.classList.toggle("active");
+  });
+});
 
 const handleClickMobileNavToggle = (e) => {
   mobile_nav_toggle.classList.toggle("open");
@@ -15,9 +25,11 @@ const handleClickAccordionHeader = (e) => {
   const faqsAccordionContent = e.target.nextElementSibling;
 
   faqsAccordionContent.style.height = `${faqsAccordionContent.scrollHeight}px`;
+  faqsAccordionContent.style.visibility = "visible";
   faqsAccordionContent.classList.toggle("active");
   if (!faqsAccordionContent.classList.contains("active")) {
     faqsAccordionContent.style.height = "0px";
+    faqsAccordionContent.style.visibility = "hidden";
   }
 
   const ic = e.target.querySelector(".faqs-accordion__icon");
