@@ -83,9 +83,27 @@ Validator({
   rules: [
     Validator.isRequired(
       "#first_name",
-      `<p class="form__test-err"><i class="fa-solid fa-xmark"></i>required</p>`
+      `<p class="form__test-err"><i class="fa-solid fa-xmark form__test-icon"></i> First name is required</p>`
     ),
-    Validator.isRequired("#email", "vui long nhap truong nay"),
-    Validator.isEmail("#email", "Vui long nhap dung truong email"),
+    Validator.isRequired(
+      "#last_name",
+      `<p class="form__test-err"><i class="fa-solid fa-xmark form__test-icon"></i> Last name is required</p>`
+    ),
+    Validator.isRequired(
+      "#email",
+      `<p class="form__test-err"><i class="fa-solid fa-xmark form__test-icon"></i> Email is required</p>`
+    ),
+    Validator.isRequired(
+      "#message",
+      `<p class="form__test-err"><i class="fa-solid fa-xmark form__test-icon"></i> Email is required</p>`
+    ),
+    Validator.isRequired(
+      "#attack-cv",
+      `<p class="form__test-err"><i class="fa-solid fa-xmark form__test-icon"></i> Attack CV is required</p>`
+    ),
+    Validator.isEmail(
+      "#email",
+      `<p class="form__test-err"><i class="fa-solid fa-xmark form__test-icon"></i> Your Message is required.</p>`
+    ),
   ],
 });

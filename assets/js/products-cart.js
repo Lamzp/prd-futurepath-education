@@ -1,10 +1,10 @@
 const productsCart = document.querySelector(".product-cart__list");
+const totalProduct = document.querySelector(".product-cart__sum-number");
 
 const products = cartLS.list();
 function render() {
   products.map((item) => {
     const sumPrice = item.quantity * item.price;
-    console.log(item);
     return (productsCart.innerHTML += `
         <div class="product-cart__item">
               <div class="product-cart__img">
@@ -25,23 +25,27 @@ function render() {
   });
 }
 render();
+totalProduct.innerText = cartLS.total();
+const loading = `<div class="loading">
+<span class="loading__inner"></span>
+</div>`;
 function minusProduct(id) {
   cartLS.quantity(id, -1);
-  productsCart.innerHTML = "";
+  productsCart.innerHTML = loading;
   setTimeout(() => {
     location.reload();
   }, 500);
 }
 function plusProduct(id) {
   cartLS.quantity(id, 1);
-  productsCart.innerHTML = "";
+  productsCart.innerHTML = loading;
   setTimeout(() => {
     location.reload();
   }, 500);
 }
 function deleteProduct(id) {
   cartLS.remove(id);
-  productsCart.innerHTML = "";
+  productsCart.innerHTML = loading;
   setTimeout(() => {
     location.reload();
   }, 500);
