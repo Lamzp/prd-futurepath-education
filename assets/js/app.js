@@ -3,6 +3,8 @@ const navList = document.querySelector(".nav-list");
 const faqsAccordionHeader = document.querySelectorAll(
   ".faqs-accordion__header"
 );
+const menu = document.querySelector(".navigation-primary");
+const header = document.querySelector(".header");
 const strongHero = document.querySelectorAll(".hero strong");
 const animationUp = document.querySelectorAll(".animation-up");
 const navLink = document.querySelectorAll(".nav-link");
@@ -16,7 +18,34 @@ const navItem = document.querySelectorAll(".nav-list > .nav-item");
     subNav.classList.toggle("active");
   });
 });
-
+function debounceFn(func, wait, immediate) {
+  let timeout;
+  return function () {
+    let context = this,
+      args = arguments;
+    let later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+window.addEventListener(
+  "scroll",
+  debounceFn((e) => {
+    const scrollY = window.pageYOffset;
+    if (scrollY >= 95) {
+      menu && menu.classList.add("is-fixed");
+      header.classList.add("has-space");
+    } else {
+      menu && menu.classList.remove("is-fixed");
+      header.classList.remove("has-space");
+    }
+  }, 50)
+);
 const handleClickMobileNavToggle = (e) => {
   mobile_nav_toggle.classList.toggle("open");
   navList.classList.toggle("active");
