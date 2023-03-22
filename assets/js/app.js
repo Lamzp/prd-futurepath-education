@@ -44,7 +44,7 @@ window.addEventListener(
       menu && menu.classList.remove("is-fixed");
       header.classList.remove("has-space");
     }
-  }, 50)
+  }, 10)
 );
 const handleClickMobileNavToggle = (e) => {
   mobile_nav_toggle.classList.toggle("open");
@@ -76,32 +76,24 @@ mobile_nav_toggle.addEventListener("click", handleClickMobileNavToggle);
   item.addEventListener("click", handleClickAccordionHeader);
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const { target } = entry;
-    target.classList.toggle("active", entry.isIntersecting);
-    observer.unobserve(target);
-  });
-}, {});
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.toggle("active");
+        entry.target.classList.toggle("is-active");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
 [...strongHero].forEach((item) => {
   observer.observe(item);
 });
-
-const animation = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const { target } = entry;
-      target.classList.toggle("is-active", entry.isIntersecting);
-      //nimation.unobserve(target);
-    });
-  },
-  {
-    rootMargin: "-10px",
-  }
-);
 [...animationUp].forEach((item) => {
-  animation.observe(item);
+  observer.observe(item);
 });
 
 const idP = document.querySelector(".enroll-sell__id");
@@ -111,19 +103,20 @@ const imgP = document.querySelector(".enroll-sell__img img");
 const formSell = document.querySelector(".enroll-sell__quantity");
 
 // submit to add Local
-formSell.addEventListener("submit", (e) => {
-  e.preventDefault();
+formSell &&
+  formSell.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const price = +priceP.split(",").join("");
-  const img = imgP.getAttribute("src");
-  const quantity = +e.target.elements.quantity.value;
-  const id = +e.target.elements.id.value;
-  console.log(quantity);
-  const product = {
-    id,
-    img,
-    name: nameP.textContent,
-    price: price,
-  };
-  cartLS.add(product, quantity);
-});
+    const price = +priceP.split(",").join("");
+    const img = imgP.getAttribute("src");
+    const quantity = +e.target.elements.quantity.value;
+    const id = +e.target.elements.id.value;
+    console.log(quantity);
+    const product = {
+      id,
+      img,
+      name: nameP.textContent,
+      price: price,
+    };
+    cartLS.add(product, quantity);
+  });
