@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step two</title>
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header our-programmes">
+        <!-- navigation-primary -->
+        <div class="container">
+            <nav class="navigation-primary">
+                <a href="../index.html" class="header__link-home">
+                    <img src="../assets/images/Logo.png" alt="Futurepath Education" class="img">
+                </a>
+                <button class="mobile-nav-toggle">
+                    <span id="bar1" class="bar"></span>
+                    <span id="bar2" class="bar"></span>
+                </button>
+
+                <ul role="list" class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                        <i class="fa-solid fa-angle-down nav-item__icon"></i>
+                        <ul class="sub-nav" role="list">
+                            <li class="nav-item"><a href="./about-futurepath-education.html" class="nav-link">About
+                                    Futurepath Education
+                                </a></li>
+                            <li class="nav-item"><a href="./why-us.html" class="nav-link">Why Us?</a></li>
+                            <li class="nav-item"><a href="./location.html" class="nav-link">Location</a></li>
+                            <li class="nav-item"><a href="./faculty.html" class="nav-link">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="./our-programmes.html" class="nav-link">Our Programmes</a></li>
+                    <li class="nav-item"><a href="./consult.html" class="nav-link">Consult</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Help & FAQs</a>
+                        <i class="fa-solid fa-angle-down nav-item__icon"></i>
+                        <ul class="sub-nav" role="list">
+                            <li class="nav-item"><a href="./academic-information.html" class="nav-link">Academic
+                                    Information</a></li>
+                            <li class="nav-item"><a href="./pastoral-information.html" class="nav-link">Pastoral
+                                    Information</a></li>
+                            <li class="nav-item"><a href="./contact-us.html" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item"><a href="./join-our-team.html" class="nav-link">Join Our Team</a></li>
+                        </ul>
+                    </li>
+                    <a href="./enroll.html" class="header__btn-mobile">
+                        <button class="btn btn--light header__btn-mobile"><span>Enroll</span></button>
+                    </a>
+                </ul>
+
+                <a href="./enroll.html" class="header__btn-top"><button
+                        class="btn btn--light btn-header"><span>Enroll</span></button>
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-step">
+        <section class="step-header">
+            <div class="container">
+                <div class="step-header__content">
+                    <div class="step-header__item">
+                        <span class="step-header__number">1</span>
+                        <span class="step-header__text">Programme choice</span>
+                    </div>
+                    <div class="step-header__item active">
+                        <span class="step-header__number">2</span>
+                        <span class="step-header__text">Participant details</span>
+                    </div>
+                    <div class="step-header__item">
+                        <span class="step-header__number">3</span>
+                        <span class="step-header__text">Parent or guardian details</span>
+                    </div>
+                    <div class="step-header__item">
+                        <span class="step-header__number">4</span>
+                        <span class="step-header__text">Secure payment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-content">
+            <div class="container">
+                <div class="step-body">
+                    <div class="step-content__left">
+                        <div class="step-check">
+                            <p class="step-check__title">
+                                Have you already started your enrolment?
+                            </p>
+                            <p class="step-check__content">
+                                If you previously saved your enrolment, please check your email and use the token link
+                                to
+                                return
+                                here.
+                            </p>
+                        </div>
+
+                        <div class="contact-form">
+                            <!-- title -->
+                            <h2 class="contact-form__title">Participant details:</h2>
+                            <!-- form -->
+                            <form action="" class="step-form" autocomplete="off">
+                                <div class="step-form-row">
+                                    <div class="step-form__group">
+                                        <label for="participant-name" class="step-form-label">Participant name </label>
+                                        <input type="text" id="participant-name" class="step-form-input">
+                                    </div>
+                                    <div class="step-form__group">
+                                        <label for="participant-last-name" class="step-form-label">Participant last name
+                                        </label>
+                                        <input type="text" id="participant-last-name" class="step-form-input">
+                                    </div>
+                                </div>
+
+                                <div class="step-form-row">
+                                    <div class="step-form__group">
+                                        <label for="participant-email" class="step-form-label">Participant email
+                                        </label>
+                                        <input type="text" id="participant-email" class="step-form-input">
+                                    </div>
+                                    <div class="step-form__group">
+                                        <label for="participant-last-name" class="step-form-label">Participant gender
+                                        </label>
+                                        <select name="participant-last-name" id="participant-last-name"
+                                            class="step-form-input">
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="step-form-row">
+                                    <div class="step-form__group">
+                                        <label for="participant-last-name"
+                                            class="step-form-label step-form-label--one">Participant gender
+                                        </label>
+                                        <input type="date" class="step-form-input step-form-input--one"
+                                            id="participant-last-name" name="participant-last-name">
+                                    </div>
+                                </div>
+                                <div class="step-form-row">
+                                    <div class="step-form__group">
+                                        <label for="participant-last-name"
+                                            class="step-form-label step-form-label--one">Participant gender
+                                        </label>
+                                        <select name="participant-last-name" id="participant-last-name"
+                                            class="step-form-input step-form-input--one">
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                            <option value="He/Him/His" class="step-form-option">He/Him/His</option>
+                                            <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
+                                            <option value="They/Them/Theirs" class="step-form-option">They/Them/Theirs
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="step-form__group">
+                                    <label for="participant-last-name" class="step-form-label">Name of current school/
+                                        college and country
+                                    </label>
+                                    <input type="text" class="step-form-input " id="participant-last-name"
+                                        name="participant-last-name">
+                                </div>
+                                <div class="step-form__group">
+                                    <label for="participant-last-name" class="step-form-label">If you were recommended
+                                        by an educational consultant, please enter their name:
+                                    </label>
+                                    <input type="text" class="step-form-input " id="participant-last-name"
+                                        name="participant-last-name">
+                                </div>
+                                <div class="step-motivation">
+                                    <h3 class="step-motivation__title">Participant motivations:</h3>
+                                    <p class="step-motivation__desc">Why does the student want to study their chosen
+                                        subject at Immerse? Immerse Education's academic programmes are challenging, and
+                                        we want to ensure that each student who enrols is motivated and interested in
+                                        their chosen subject. We advise that this section is completed by the student.
+                                        Additional information on the student's academic achievements and ambitions are
+                                        collected after enrolment. 200 words maximum.</p>
+                                </div>
+                                <!-- text-textarea -->
+                                <div class="step-form__group">
+                                    <label for="participant-motivations" class="step-form-label">Participant motivations
+                                    </label>
+                                    <textarea name="participant-motivations " id="participant-motivations" rows="3"
+                                        class="step-form-input"></textarea>
+                                    <button class="contact-form__btn btn btn--dark"><span>Continue</span></button>
+                                </div>
+                            </form>
+                            <a href="./enroll-step-three.html"><button
+                                    class="contact-form__btn btn btn--dark"><span>Continue</span></button></a>
+                        </div>
+
+                        <div class="step-line">
+                            <div class="step-line__content"></div>
+                        </div>
+
+                        <!-- contact -->
+                        <div class="step-contact">
+                            <h2 class="step-contact__title">You are about to secure your enrolment to Immerse. After
+                                your
+                                enrolment we will contact you with the following:</h2>
+                            <div class="step-contact__list">
+                                <div class="step-contact__item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <p class="step-contact__desc">Enrolment confirmation email</p>
+                                </div>
+                                <div class="step-contact__item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <p class="step-contact__desc">Detailed information to help you prepare for your
+                                        chosen programme</p>
+                                </div>
+                                <div class="step-contact__item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <p class="step-contact__desc">Forms to complete so that your tutor can tailor your
+                                        academic experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-content__right">
+                        <h2 class="step-right__title">Summary</h2>
+                        <!-- product -->
+                        <div class="step-cart">
+                            <div class="step-cart__images">
+                                <img src="../assets/images/digital-bg.jpg" alt="">
+                            </div>
+                            <div class="step-cart__item">
+                                <h3 class="step-cart__title">
+                                    INTERNET OF THINGS (IOT) | 2023</h3>
+                            </div>
+                            <a href="#!" class="step-cart__link">Change</a>
+                        </div>
+                        <!-- day -->
+                        <p class="step-right__day">
+                            January - 13th January 2024
+                        </p>
+                        <!-- code -->
+                        <div class="step-code">
+                            <input type="text" class="step-code__input" placeholder="I have a referral discount code">
+                            <button class="step-code__btn">Apply</button>
+                        </div>
+                        <!-- price -->
+                        <div class="step-code__price">
+                            <h3 class="step-code__title">Price details</h3>
+                            <div class="step-code__row">
+                                <p class="step-code__info">Programme Fee</p>
+                                <p class="step-code__number">£ <span>5495</span></p>
+                            </div>
+                        </div>
+                        <!-- note -->
+                        <div class="step-note">
+                            <h3 class="step-note__title">
+                                Empowered Learning Guarantee:
+                            </h3>
+                            <p class="step-note__desc">
+                                If our programmes haven't helped to improve your knowledge in your chosen subject area,
+                                we will provide you with an Immerse Online Programme entirely for free.
+                            </p>
+                        </div>
+                        <!-- info -->
+                        <div class="step-info">
+                            <div class="step-info__list">
+                                <a class="step-info__item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>chat</span>
+                                </a>
+                                <a class="step-info__item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>chat</span>
+                                </a>
+                                <a class="step-info__item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>chatdsfd</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <h2 class="footer__heading heading-primary">STAY UPDATED</h2>
+
+                <div class="sign-up">
+                    <div class="sign-up__content">
+                        <p class="sign-up__desc">Sign up to be the first to find out when we add new programmes,
+                            exclusive
+                            deals, more about your futurepath and career!</p>
+                        <p class="sign-up__desc">We respect your privacy and will never share your information with any
+                            third-party vendors</p>
+                    </div>
+                    <form action="" class="sign-up__form">
+                        <input type="text" placeholder="Email Address" class="sign-up__input">
+                        <button class="btn btn--dark sign-up__btn"><span>Sign Up</span></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__light"></div>
+
+            <div class="footer__bottom">
+                <div class="footer__sup-contact">
+                    <div class="footer__support">
+                        <h2 class="heading-primary">
+                            SUPPORT
+                        </h2>
+                        <div class="footer__list">
+                            <a href="./terms-conditions.html" class="footer__item"><span>Terms and Conditions</span></a>
+                            <a href="./privacy-policy.html" class="footer__item"><span>Privacy Policy</span></a>
+                            <a href="./complaints.html" class="footer__item"><span>Complaints Policy</span></a>
+                            <a href="./pages/faqs.html" class="footer__item"><span>FAQs</span></a>
+                        </div>
+                    </div>
+                    <div class="footer__contact">
+                        <h2 class="heading-primary">
+                            CONTACT
+                        </h2>
+                        <strong class="footer__email-admin">admin@futurepath.education</strong>
+                    </div>
+                </div>
+
+                <div class="footer__find-your-future">
+                    <h2 class="heading-primary">
+                        FIND YOUR FUTURE.
+                    </h2>
+                    <a href="../index.html" class="footer__logo">
+                        <img src="../assets/images/Logo.png" alt="" class="footer__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js"
+        type="text/javascript"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
