@@ -111,7 +111,13 @@
                             <!-- title -->
                             <h2 class="contact-form__title">Add billing address</h2>
                             <!-- form -->
-                            <form action="" class="step-form" autocomplete="off">
+                            <div action="" class="step-form">
+                                <div class="step-form__group">
+                                    <input type="checkbox" id="check-box" class="step-form__checkbox">
+                                    <label for="check-box" class="step-form__checkbox-label">Parent/guardian and account
+                                        details are the same
+                                    </label>
+                                </div>
                                 <!-- form-row -->
                                 <div class="step-form-row">
                                     <div class="step-form__group">
@@ -132,7 +138,7 @@
                                 <!-- form-row -->
                                 <div class="step-form-row">
                                     <div class="step-form__group">
-                                        <label for="participant-name" class="step-form-label">Town / City
+                                        <label for="participant-name" class="step-form-label">Select country
                                         </label>
                                         <input type="text" id="participant-name" class="step-form-input">
                                     </div>
@@ -152,7 +158,6 @@
                                         </label>
                                         <input type="text" id="participant-last-name" class="step-form-input">
                                     </div>
-
                                 </div>
                                 <div class="step-form__group">
                                     <label for="guardian-phone-number" class="step-form-label">Parent/ Guardian home
@@ -161,9 +166,38 @@
                                     <input type="text" class="step-form-input " id="guardian-phone-number"
                                         name="participant-last-name">
                                 </div>
-                            </form>
-                            <a href="enroll-step-three"><button
-                                    class="contact-form__btn btn btn--dark"><span>Continue</span></button></a>
+                                <h2 class="contact-form__title">Credit card</h2>
+                                <!-- credit cart -->
+                                <div class="step-form-row">
+                                    <div class="step-form__group">
+                                        <label for="participant-name" class="step-form-label">Cart Number
+                                        </label>
+                                        <input type="text" id="participant-name" class="step-form-input"
+                                            placeholder="1234 1234 1234 1234">
+                                    </div>
+                                    <div class="step-form__group">
+                                        <label for="participant-last-name" class="step-form-label">Expiry Date
+                                        </label>
+                                        <input type="text" id="participant-last-name" class="step-form-input"
+                                            placeholder="MM/YY">
+                                    </div>
+                                    <div class="step-form__group">
+                                        <label for="participant-name" class="step-form-label">
+                                            Card Code (CVC)
+                                        </label>
+                                        <input type="text" id="participant-name" class="step-form-input"
+                                            placeholder="CVC">
+                                    </div>
+                                </div>
+                                <div class="step-form__group">
+                                    <input type="checkbox" id="confirm" class="step-form__checkbox">
+                                    <label for="confirm" class="step-form__checkbox-label">I confirm I agree to Immerse
+                                        Terms and Conditions and Privacy Note
+                                    </label>
+                                </div>
+                            </div>
+                            <a href="#!"><button class="contact-form__btn btn btn--dark"><span>Place your
+                                        order</span></button></a>
                         </div>
 
                         <div class="step-line">
@@ -197,33 +231,7 @@
                     <div class="step-content__right">
                         <h2 class="step-right__title">Summary</h2>
                         <!-- product -->
-                        <div class="step-cart">
-                            <div class="step-cart__images">
-                                <img src="../assets/images/digital-bg.jpg" alt="">
-                            </div>
-                            <div class="step-cart__item">
-                                <h3 class="step-cart__title">
-                                    INTERNET OF THINGS (IOT) | 2023</h3>
-                            </div>
-                            <a href="#!" class="step-cart__link">Change</a>
-                        </div>
-                        <!-- day -->
-                        <p class="step-right__day">
-                            January - 13th January 2024
-                        </p>
-                        <!-- code -->
-                        <div class="step-code">
-                            <input type="text" class="step-code__input" placeholder="I have a referral discount code">
-                            <button class="step-code__btn">Apply</button>
-                        </div>
-                        <!-- price -->
-                        <div class="step-code__price">
-                            <h3 class="step-code__title">Price details</h3>
-                            <div class="step-code__row">
-                                <p class="step-code__info">Programme Fee</p>
-                                <p class="step-code__number">£ <span>5495</span></p>
-                            </div>
-                        </div>
+                        <div class="cart-js"></div>
                         <!-- note -->
                         <div class="step-note">
                             <h3 class="step-note__title">
@@ -238,16 +246,16 @@
                         <div class="step-info">
                             <div class="step-info__list">
                                 <a class="step-info__item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>chat</span>
+                                    <i class="fa-solid fa-message"></i>
+                                    <span>Chat</span>
                                 </a>
                                 <a class="step-info__item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>chat</span>
+                                    <i class="fa-solid fa-envelope-open"></i>
+                                    <span>admin.@futurepath.education</span>
                                 </a>
                                 <a class="step-info__item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>chatdsfd</span>
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    <span>+84 03434334</span>
                                 </a>
                             </div>
                         </div>
@@ -315,6 +323,7 @@
     <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js"
         type="text/javascript"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pay.js"></script>
 </body>
 
 </html>

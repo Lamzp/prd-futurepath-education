@@ -113,29 +113,36 @@
                             <!-- form -->
                             <form action="" class="step-form">
                                 <div class="radio-group">
-                                    <div class="radio-btn">
-                                        <input type="radio" name="type" id="web-design" value="web-design" checked />
-                                        <label for="web-design">Web Design</label>
-                                    </div>
-
-                                    <div class="radio-btn">
-                                        <input type="radio" name="type" id="web-development" value="web-development" />
-                                        <label for="web-development">Web Development</label>
-                                    </div>
-
-                                    <div class="radio-btn">
-                                        <input type="radio" name="type" id="logo-design" value="logo-design" />
-                                        <label for="logo-design">Logo Design</label>
-                                    </div>
-
-                                    <div class="radio-btn">
-                                        <input type="radio" name="type" id="other" value="other" />
-                                        <label for="other">Other</label>
+                                    <div class="radio-container">
+                                        <input type="checkbox" name="" id="day" class="check-input">
+                                        <label for="day" class="check-label">
+                                            6th August - 19th August 2023</label>
+                                        <span>£ 5995</span>
                                     </div>
                                 </div>
+                                <div class="radio__demo"></div>
+                                <label for="pay" class="contact-form__title">Select Pay Deposit or Pay in Full</label>
+                                <!-- radio select Pay -->
+                                <div class="step-pay">
+                                    <div class="radio-group">
+                                        <input type="checkbox" name="pay" id="pay-deposit" class="check-input">
+                                        <label for="pay-deposit" class="check-label">
+                                            Pay Deposit </label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="checkbox" name="pay" id="pay-full" class="check-input">
+                                        <label for="pay-full" class="check-label">
+                                            Pay in full</label>
+                                    </div>
+                                </div>
+                                <!-- Result Pay -->
+                                <p class="pay-text">
+                                    <span class="pay-text__title">Pay a deposit of £995</span>
+                                </p>
                                 <a href="./enroll-step-two.html"><button class="contact-form__btn">Continue</button></a>
                             </form>
-                            <a href="./enroll-step-two.html"><button class="contact-form__btn">Continue</button></a>
+                            <a href="./enroll-step-two.html"><button
+                                    class=" btn btn--dark contact-form__btn"><span>Continue</span></button></a>
                         </div>
 
                         <div class="step-line">
@@ -169,32 +176,8 @@
                     <div class="step-content__right">
                         <h2 class="step-right__title">Summary</h2>
                         <!-- product -->
-                        <div class="step-cart">
-                            <div class="step-cart__images">
-                                <img src="../assets/images/digital-bg.jpg" alt="">
-                            </div>
-                            <div class="step-cart__item">
-                                <h3 class="step-cart__title">
-                                    INTERNET OF THINGS (IOT) | 2023</h3>
-                            </div>
-                            <a href="#!" class="step-cart__link">Change</a>
-                        </div>
-                        <!-- day -->
-                        <p class="step-right__day">
-                            January - 13th January 2024
-                        </p>
-                        <!-- code -->
-                        <div class="step-code">
-                            <input type="text" class="step-code__input" placeholder="I have a referral discount code">
-                            <button class="step-code__btn">Apply</button>
-                        </div>
-                        <!-- price -->
-                        <div class="step-code__price">
-                            <h3 class="step-code__title">Price details</h3>
-                            <div class="step-code__row">
-                                <p class="step-code__info">Programme Fee</p>
-                                <p class="step-code__number">£ <span>5495</span></p>
-                            </div>
+                        <div class="cart-js">
+
                         </div>
                         <!-- note -->
                         <div class="step-note">
@@ -210,16 +193,16 @@
                         <div class="step-info">
                             <div class="step-info__list">
                                 <a class="step-info__item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>chat</span>
+                                    <i class="fa-solid fa-message"></i>
+                                    <span>Chat</span>
                                 </a>
                                 <a class="step-info__item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>chat</span>
+                                    <i class="fa-solid fa-envelope-open"></i>
+                                    <span>admin.@futurepath.education</span>
                                 </a>
                                 <a class="step-info__item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>chatdsfd</span>
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    <span>+84 03434334</span>
                                 </a>
                             </div>
                         </div>
@@ -287,6 +270,7 @@
     <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js"
         type="text/javascript"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pay.js"></script>
 </body>
 
 </html>
