@@ -101,22 +101,23 @@ const nameP = document.querySelector(".enroll-sell__heading");
 const priceP = document.querySelector(".enroll-sell__price-num")?.textContent;
 const imgP = document.querySelector(".enroll-sell__img img");
 const formSell = document.querySelector(".enroll-sell__quantity");
+const btnFormSell = document.querySelector(".enroll-sell__btn span");
 
 // submit to add Local
 formSell &&
   formSell.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const price = +priceP.split(",").join("");
     const img = imgP.getAttribute("src");
     const quantity = +e.target.elements.quantity.value;
     const id = +e.target.elements.id.value;
-    console.log(quantity);
     const product = {
       id,
       img,
       name: nameP.textContent,
       price: price,
     };
+    btnFormSell.innerText = "Adding...";
     cartLS.add(product, quantity);
   });

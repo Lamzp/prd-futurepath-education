@@ -14,9 +14,9 @@ function render() {
               <h3 class="product-cart__title">${item.name}</h3>
       
               <div class="product-cart__quantity">
-                  <i onclick="minusProduct(${item.id})" class="fa-solid fa-minus product-cart__quantity-minus"></i>
+                  
                   <span class="product-cart__quantity--num">${item.quantity}</span>
-                  <i onclick="plusProduct(${item.id})" class="fa-solid fa-plus product-cart__quantity-plus"></i>
+                  
               </div>
               <p class="product-cart__price-sum">SGD <span>${sumPrice}</span>.00</p>
               <i onclick="deleteProduct(${item.id})" class="fa-solid fa-xmark product-cart__close"></i>
@@ -29,20 +29,6 @@ totalProduct.innerText = cartLS.total();
 const loading = `<div class="loading">
 <span class="loading__inner"></span>
 </div>`;
-function minusProduct(id) {
-  cartLS.quantity(id, -1);
-  productsCart.innerHTML = loading;
-  setTimeout(() => {
-    location.reload();
-  }, 500);
-}
-function plusProduct(id) {
-  cartLS.quantity(id, 1);
-  productsCart.innerHTML = loading;
-  setTimeout(() => {
-    location.reload();
-  }, 500);
-}
 function deleteProduct(id) {
   cartLS.remove(id);
   productsCart.innerHTML = loading;

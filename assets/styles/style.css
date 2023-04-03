@@ -2005,6 +2005,10 @@ a {
   visibility: hidden;
   transition: all 0.25s linear;
 }
+.product-cart__heading {
+  color: var(--clr-secondary);
+  text-transform: uppercase;
+}
 /* footer */
 .footer {
   background-color: var(--clr-primary);
