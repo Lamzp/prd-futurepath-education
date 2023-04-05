@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step three</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
@@ -46,6 +63,8 @@
                         <a href="#" class="nav-link">Help & FAQs</a>
                         <i class="fa-solid fa-angle-down nav-item__icon"></i>
                         <ul class="sub-nav" role="list">
+                            <li class="nav-item"><a href="./faqs.html" class="nav-link">
+                                    FAQs</a></li>
                             <li class="nav-item"><a href="./academic-information.html" class="nav-link">Academic
                                     Information</a></li>
                             <li class="nav-item"><a href="./pastoral-information.html" class="nav-link">Pastoral
@@ -95,107 +114,49 @@
             <div class="container">
                 <div class="step-body">
                     <div class="step-content__left">
-                        <div class="step-check">
-                            <p class="step-check__title">
-                                Have you already started your enrolment?
-                            </p>
-                            <p class="step-check__content">
-                                If you previously saved your enrolment, please check your email and use the token link
-                                to
-                                return
-                                here.
-                            </p>
-                        </div>
-
                         <div class="contact-form">
                             <!-- title -->
-                            <h2 class="contact-form__title">Add billing address</h2>
+                            <h2 class="contact-form__title">Bank Transfer Details</h2>
+                            <div class="contact-form__price-down">
+                                <h3 class="contact-form__price-transfer"> Get a 5% off when you pay through direct bank
+                                    transfer!</h3>
+                                <h3 class="contact-form__price-transfer"> Bank transfer Price - £3725</h3>
+                            </div>
                             <!-- form -->
                             <div action="" class="step-form">
-                                <div class="step-form__group">
-                                    <input type="checkbox" id="check-box" class="step-form__checkbox">
-                                    <label for="check-box" class="step-form__checkbox-label">Parent/guardian and account
-                                        details are the same
-                                    </label>
-                                </div>
-                                <!-- form-row -->
-                                <div class="step-form-row">
-                                    <div class="step-form__group">
-                                        <label for="first-name" class="step-form-label">First name</label>
-                                        <input type="text" id="first-name" class="step-form-input">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="last-name" class="step-form-label">Last name
-                                        </label>
-                                        <input type="text" id="last-name" class="step-form-input">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="phone-number" class="step-form-label">Phone number
-                                        </label>
-                                        <input type="text" id="phone-number" class="step-form-input">
+                                <div class="acc">
+                                    <div class="acc__content">
+                                        <div class="acc__item">
+                                            <p class="acc__title">Account Number</p>
+                                            <p class="acc__desc">20723832</p>
+                                        </div>
+                                        <div class="acc__item">
+                                            <p class="acc__title">IBAN</p>
+                                            <p class="acc__desc">GB31CLRB04060520723832</p>
+                                        </div>
+                                        <div class="acc__item">
+                                            <p class="acc__title">Sort Code</p>
+                                            <p class="acc__desc">04-06-05</p>
+                                        </div>
+                                        <div class="acc__item">
+                                            <p class="acc__title">SWIFT Code</p>
+                                            <p class="acc__desc">CLRBGB22</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- form-row -->
-                                <div class="step-form-row">
-                                    <div class="step-form__group">
-                                        <label for="participant-name" class="step-form-label">Select country
-                                        </label>
-                                        <input type="text" id="participant-name" class="step-form-input">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="participant-last-name" class="step-form-label">Town / City
-                                        </label>
-                                        <input type="text" id="participant-last-name" class="step-form-input">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="participant-name" class="step-form-label">
-                                            County
-                                        </label>
-                                        <input type="text" id="participant-name" class="step-form-input">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="participant-last-name" class="step-form-label">Postcode
-                                        </label>
-                                        <input type="text" id="participant-last-name" class="step-form-input">
-                                    </div>
-                                </div>
-                                <div class="step-form__group">
-                                    <label for="guardian-phone-number" class="step-form-label">Parent/ Guardian home
-                                        phone number
-                                    </label>
-                                    <input type="text" class="step-form-input " id="guardian-phone-number"
-                                        name="participant-last-name">
-                                </div>
-                                <h2 class="contact-form__title">Credit card</h2>
-                                <!-- credit cart -->
-                                <div class="step-form-row">
-                                    <div class="step-form__group">
-                                        <label for="participant-name" class="step-form-label">Cart Number
-                                        </label>
-                                        <input type="text" id="participant-name" class="step-form-input"
-                                            placeholder="1234 1234 1234 1234">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="participant-last-name" class="step-form-label">Expiry Date
-                                        </label>
-                                        <input type="text" id="participant-last-name" class="step-form-input"
-                                            placeholder="MM/YY">
-                                    </div>
-                                    <div class="step-form__group">
-                                        <label for="participant-name" class="step-form-label">
-                                            Card Code (CVC)
-                                        </label>
-                                        <input type="text" id="participant-name" class="step-form-input"
-                                            placeholder="CVC">
-                                    </div>
-                                </div>
+
+
                                 <div class="step-form__group">
                                     <input type="checkbox" id="confirm" class="step-form__checkbox">
-                                    <label for="confirm" class="step-form__checkbox-label">I confirm I agree to Immerse
+                                    <label for="confirm" class="step-form__checkbox-label">I confirm I
+                                        agree to
+                                        Futurepath
+                                        Education
                                         Terms and Conditions and Privacy Note
                                     </label>
                                 </div>
                             </div>
+                            <hr class="hr">
                             <a href="#!"><button class="contact-form__btn btn btn--dark"><span>Place your
                                         order</span></button></a>
                         </div>
@@ -206,7 +167,8 @@
 
                         <!-- contact -->
                         <div class="step-contact">
-                            <h2 class="step-contact__title">You are about to secure your enrolment to Immerse. After
+                            <h2 class="step-contact__title">You are about to secure your enrolment to Futurepath
+                                Education. After
                                 your
                                 enrolment we will contact you with the following:</h2>
                             <div class="step-contact__list">
@@ -232,30 +194,16 @@
                         <h2 class="step-right__title">Summary</h2>
                         <!-- product -->
                         <div class="cart-js"></div>
-                        <!-- note -->
-                        <div class="step-note">
-                            <h3 class="step-note__title">
-                                Empowered Learning Guarantee:
-                            </h3>
-                            <p class="step-note__desc">
-                                If our programmes haven't helped to improve your knowledge in your chosen subject area,
-                                we will provide you with an Immerse Online Programme entirely for free.
-                            </p>
-                        </div>
                         <!-- info -->
                         <div class="step-info">
                             <div class="step-info__list">
-                                <a class="step-info__item">
-                                    <i class="fa-solid fa-message"></i>
-                                    <span>Chat</span>
-                                </a>
                                 <a class="step-info__item">
                                     <i class="fa-solid fa-envelope-open"></i>
                                     <span>admin.@futurepath.education</span>
                                 </a>
                                 <a class="step-info__item">
                                     <i class="fa-solid fa-phone-flip"></i>
-                                    <span>+84 03434334</span>
+                                    <span>+84 366 184 831</span>
                                 </a>
                             </div>
                         </div>

@@ -1,4 +1,6 @@
 const stepCart = document.querySelector(".cart-js");
+const payCategory = document.querySelectorAll('input[name="pay"]');
+const payText = document.querySelector(".pay-text");
 
 const products = cartLS.list();
 function render() {
@@ -37,3 +39,14 @@ function render() {
   });
 }
 render();
+
+console.log(payCategory);
+[...payCategory].forEach((item) => {
+  item.addEventListener("change", (e) => {
+    if (e.target.value === "deposit") {
+      payText.innerHTML = `<span class="pay-text__title">Pay in Instalments of £795  </span>`;
+    } else {
+      payText.innerHTML = `<span class="pay-text__title">Pay a full of £3925</span>`;
+    }
+  });
+});

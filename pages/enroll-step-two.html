@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step two</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
@@ -46,6 +63,8 @@
                         <a href="#" class="nav-link">Help & FAQs</a>
                         <i class="fa-solid fa-angle-down nav-item__icon"></i>
                         <ul class="sub-nav" role="list">
+                            <li class="nav-item"><a href="./faqs.html" class="nav-link">
+                                    FAQs</a></li>
                             <li class="nav-item"><a href="./academic-information.html" class="nav-link">Academic
                                     Information</a></li>
                             <li class="nav-item"><a href="./pastoral-information.html" class="nav-link">Pastoral
@@ -95,23 +114,11 @@
             <div class="container">
                 <div class="step-body">
                     <div class="step-content__left">
-                        <div class="step-check">
-                            <p class="step-check__title">
-                                Have you already started your enrolment?
-                            </p>
-                            <p class="step-check__content">
-                                If you previously saved your enrolment, please check your email and use the token link
-                                to
-                                return
-                                here.
-                            </p>
-                        </div>
-
                         <div class="contact-form">
                             <!-- title -->
                             <h2 class="contact-form__title">Participant details:</h2>
                             <!-- form -->
-                            <form action="" class="step-form" autocomplete="off">
+                            <div action="" class="step-form" autocomplete="off">
                                 <div class="step-form-row">
                                     <div class="step-form__group">
                                         <label for="participant-name" class="step-form-label">Participant name </label>
@@ -215,11 +222,11 @@
                                     </label>
                                     <textarea name="participant-motivations " id="participant-motivations" rows="3"
                                         class="step-form-input"></textarea>
-                                    <button class="contact-form__btn btn btn--dark"><span>Continue</span></button>
+                                    <a href="./enroll-step-three.html"><button
+                                            class="contact-form__btn btn btn--dark"><span>Continue</span></button></a>
                                 </div>
-                            </form>
-                            <a href="./enroll-step-three.html"><button
-                                    class="contact-form__btn btn btn--dark"><span>Continue</span></button></a>
+                            </div>
+
                         </div>
 
                         <div class="step-line">
@@ -254,16 +261,6 @@
                         <h2 class="step-right__title">Summary</h2>
                         <!-- product -->
                         <div class="cart-js"></div>
-                        <!-- note -->
-                        <div class="step-note">
-                            <h3 class="step-note__title">
-                                Empowered Learning Guarantee:
-                            </h3>
-                            <p class="step-note__desc">
-                                If our programmes haven't helped to improve your knowledge in your chosen subject area,
-                                we will provide you with an Immerse Online Programme entirely for free.
-                            </p>
-                        </div>
                         <!-- info -->
                         <div class="step-info">
                             <div class="step-info__list">
@@ -277,7 +274,7 @@
                                 </a>
                                 <a class="step-info__item">
                                     <i class="fa-solid fa-phone-flip"></i>
-                                    <span>+84 03434334</span>
+                                    <span>+84 366 184 831</span>
                                 </a>
                             </div>
                         </div>
