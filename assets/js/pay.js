@@ -44,7 +44,7 @@ console.log(payCategory);
 [...payCategory].forEach((item) => {
   item.addEventListener("change", (e) => {
     if (e.target.value === "deposit") {
-      payText.innerHTML = `<span class="pay-text__title">Pay in Instalments of £795  </span>`;
+      payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £795 </span>`;
     } else {
       payText.innerHTML = `<span class="pay-text__title">Pay a full of £3925</span>`;
     }
