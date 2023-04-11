@@ -18,7 +18,7 @@ function render() {
                   <span class="product-cart__quantity--num">${item.quantity}</span>
                   
               </div>
-              <p class="product-cart__price-sum">SGD <span>${sumPrice}</span>.00</p>
+              <p class="product-cart__price-sum">£ <span>${sumPrice}</span>.00</p>
               <i onclick="deleteProduct(${item.id})" class="fa-solid fa-xmark product-cart__close"></i>
           </div>
         `);
