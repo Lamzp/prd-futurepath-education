@@ -19,7 +19,8 @@ function render() {
 </div>
 <!-- day -->
 <p class="step-right__day">
-    January - 13th January 2024
+    
+2nd June - 9th July 2023
 </p>
 <!-- code -->
 <div class="step-code">
