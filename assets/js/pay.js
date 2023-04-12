@@ -15,7 +15,7 @@ function render() {
         <h3 class="step-cart__title">
             ${item.name}</h3>
     </div>
-    <a href="#!" class="step-cart__link">Change</a>
+    <a href="../pages/enroll.html" class="step-cart__link">Change</a>
 </div>
 <!-- day -->
 <p class="step-right__day">
