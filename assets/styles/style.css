@@ -314,6 +314,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.header.online-insights-programme,
 .header.ux-design,
 .header.computer-science,
 .header.digital-design,
@@ -326,6 +327,9 @@ a {
   background-position: center;
   background-size: cover;
   padding: 40px 0 200px 0;
+}
+.header.online-insights-programme {
+  background-image: url(../images/add1.jpg);
 }
 .header.ux-design {
   background-image: url(../images/ux-bg.jpg);
@@ -406,6 +410,7 @@ a {
   transition: all 0.15s ease;
   text-align: center;
   max-width: 350px;
+  text-transform: uppercase;
 }
 .header.our-programmes .product__item:hover .product__img {
   transform: scale(1.1);
@@ -981,6 +986,13 @@ a {
 .gird-product__left-images,
 .gird-product__right-images {
   border-radius: 23px;
+}
+.gird-porduct__quote {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  color: var(--clr-text-primary);
 }
 .product-nav {
   background-color: var(--clr-text-primary);
