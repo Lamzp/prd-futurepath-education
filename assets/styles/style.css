@@ -306,6 +306,10 @@ a {
     transform: rotate(360deg);
   }
 }
+.radio-group {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 /* header */
 .header.home {
   padding: 35px 0 180px 0;

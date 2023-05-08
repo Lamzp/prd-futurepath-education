@@ -123,19 +123,32 @@
                     <div class="step-content__left">
                         <div class="contact-form">
                             <!-- title -->
-                            <h2 class="contact-form__title">Programme choice:</h2>
+                            <h2 class="contact-form__title">Programme Choice Confirmation:</h2>
                             <!-- form -->
                             <div action="" class="step-form">
-                                <div class="radio-group">
-                                    <div class="radio-container">
-                                        <input type="checkbox" name="" id="day" class="check-input" checked>
-                                        <label for="day" class="check-label">
-                                            2nd June - 9th July 2023</label>
-                                        <span>£ 3925</span>
+                                <div>
+                                    <div class="radio-group">
+                                        <div class="radio-container">
+                                            <input type="radio" name="on-of" id="onl" class="check-input" value="on"
+                                                checked>
+                                            <label for="onl" class="check-label">
+                                                Online Insights Programme (All Year)</label>
+                                            <span>£ 1125</span>
+                                        </div>
                                     </div>
+                                    <div class="radio-group">
+                                        <div class="radio-container">
+                                            <input type="radio" name="on-of" id="day" class="check-input" value="off">
+                                            <label for="day" class="check-label">
+                                                2nd June - 9th July 2023</label>
+                                            <span>£ 3925</span>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="radio__demo"></div>
-                                <label for="pay" class="contact-form__title">Select Pay Deposit or Pay in Full</label>
+                                <label for="pay" class="contact-form__title">Select Pay in Installments or Pay in
+                                    Full</label>
                                 <!-- radio select Pay -->
                                 <div class="step-pay">
                                     <div class="radio-group">
@@ -153,7 +166,8 @@
                                 <!-- Result Pay -->
                                 <p class="pay-text">
                                     <span class="pay-text__title">Secure your place at this programme by paying a
-                                        deposit of £795</span>
+                                        deposit of £<span class="on-off">225</span>
+                                    </span>
                                 </p>
                                 <a href="./enroll-step-two.html"><button
                                         class=" btn btn--dark contact-form__btn"><span>Continue</span></button></a>

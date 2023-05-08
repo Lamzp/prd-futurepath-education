@@ -1,11 +1,15 @@
 const stepCart = document.querySelector(".cart-js");
 const payCategory = document.querySelectorAll('input[name="pay"]');
+const onOf = document.querySelectorAll('input[name="on-of"]');
 const payText = document.querySelector(".pay-text");
+const textOnOff = document.querySelector(".on-off");
 
 const products = cartLS.list();
+const product_id = cartLS.list()[0].id;
+const product = cartLS.get(product_id);
+if (!product) console.log("no product!");
 function render() {
   products.map((item) => {
-    const sumPrice = item.quantity * item.price;
     return (stepCart.innerHTML += `
     <div class="step-cart">
     <div class="step-cart__images">
@@ -20,7 +24,6 @@ function render() {
 <!-- day -->
 <p class="step-right__day">
     
-2nd June - 9th July 2023
 </p>
 <!-- code -->
 <div class="step-code">
@@ -40,14 +43,21 @@ function render() {
   });
 }
 render();
-
-console.log(payCategory);
 [...payCategory].forEach((item) => {
   item.addEventListener("change", (e) => {
     if (e.target.value === "deposit") {
       payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £795 </span>`;
     } else {
-      payText.innerHTML = `<span class="pay-text__title">Pay a full of £3925</span>`;
+      payText.innerHTML = `<span class="pay-text__title">Pay a full fee of £${product.price}</span>`;
+    }
+  });
+});
+[...onOf].forEach((item) => {
+  item.addEventListener("change", (e) => {
+    if (e.target.value === "on") {
+      textOnOff.innerText = `225`;
+    } else {
+      textOnOff.innerText = `795`;
     }
   });
 });
