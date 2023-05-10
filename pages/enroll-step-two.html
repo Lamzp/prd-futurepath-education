@@ -125,29 +125,30 @@
                             <!-- title -->
                             <h2 class="contact-form__title">Participant details:</h2>
                             <!-- form -->
-                            <div action="" class="step-form" autocomplete="off">
+                            <form action="./enroll-step-three.html" class="step-form" id="step-form-two"
+                                autocomplete="off">
                                 <div class="step-form-row">
                                     <div class="step-form__group">
-                                        <label for="participant-name" class="step-form-label">Participant name </label>
-                                        <input type="text" id="participant-name" class="step-form-input">
+                                        <label for="participant_name" class="step-form-label">Participant name </label>
+                                        <input type="text" id="participant_name" class="step-form-input">
                                     </div>
                                     <div class="step-form__group">
-                                        <label for="participant-last-name" class="step-form-label">Participant last name
+                                        <label for="participant_last_name" class="step-form-label">Participant last name
                                         </label>
-                                        <input type="text" id="participant-last-name" class="step-form-input">
+                                        <input type="text" id="participant_last_name" class="step-form-input">
                                     </div>
                                 </div>
 
                                 <div class="step-form-row">
                                     <div class="step-form__group">
-                                        <label for="participant-email" class="step-form-label">Participant email
+                                        <label for="participant_email" class="step-form-label">Participant email
                                         </label>
-                                        <input type="text" id="participant-email" class="step-form-input">
+                                        <input type="text" id="participant_email" class="step-form-input">
                                     </div>
                                     <div class="step-form__group">
-                                        <label for="participant-last-name" class="step-form-label">Participant gender
+                                        <label for="participant_gender" class="step-form-label">Participant gender
                                         </label>
-                                        <select name="participant-last-name" id="participant-last-name"
+                                        <select name="participant-last-name" id="participant_gender"
                                             class="step-form-input">
                                             <option value="He/Him/His" class="step-form-option">He/Him/His</option>
                                             <option value="She/Her/Hers" class="step-form-option">She/Her/Hers</option>
@@ -158,26 +159,26 @@
                                 </div>
                                 <div class="step-form-row">
                                     <div class="step-form__group">
-                                        <label for="participant-last-name"
+                                        <label for="participant_birth"
                                             class="step-form-label step-form-label--one">Participant date of birth
                                         </label>
                                         <input type="date" class="step-form-input step-form-input--one"
-                                            id="participant-last-name" name="participant-last-name">
+                                            id="participant_birth" name="participant_birth">
                                     </div>
                                 </div>
                                 <div class="step-form__group">
-                                    <label for="participant-last-name" class="step-form-label">Name of current school/
+                                    <label for="participant_name_school" class="step-form-label">Name of current school/
                                         college and country
                                     </label>
                                     <input type="text" class="step-form-input " id="participant-last-name"
-                                        name="participant-last-name">
+                                        name="participant_name_school">
                                 </div>
                                 <div class="step-form__group">
-                                    <label for="participant-last-name" class="step-form-label">If you were recommended
+                                    <label for="participant_educational" class="step-form-label">If you were recommended
                                         by an educational consultant, please enter their name:
                                     </label>
-                                    <input type="text" class="step-form-input " id="participant-last-name"
-                                        name="participant-last-name">
+                                    <input type="text" class="step-form-input " id="participant_educational"
+                                        name="participant_educational">
                                 </div>
                                 <div class="step-motivation">
                                     <h3 class="step-motivation__title">Participant motivations:</h3>
@@ -190,14 +191,15 @@
                                 </div>
                                 <!-- text-textarea -->
                                 <div class="step-form__group">
-                                    <label for="participant-motivations" class="step-form-label">Participant motivations
+                                    <label for="participant_message" class="step-form-label">Participant motivations
                                     </label>
-                                    <textarea name="participant-motivations " id="participant-motivations" rows="3"
+                                    <textarea name="participant_message" id="participant_message" rows="3"
                                         class="step-form-input"></textarea>
-                                    <a href="./enroll-step-three.html"><button
+                                    <a href="./enroll-step-three.html" type="submit"><button
                                             class="contact-form__btn btn btn--dark"><span>Continue</span></button></a>
                                 </div>
-                            </div>
+                            </form>
+                            <!-- end form -->
 
                         </div>
 
@@ -311,6 +313,7 @@
         type="text/javascript"></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/pay.js"></script>
+    <script src="../assets/js/sent-to-email.js"></script>
 </body>
 
 </html>

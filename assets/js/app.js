@@ -47,7 +47,7 @@ window.addEventListener(
   }, 10)
 );
 const handleClickMobileNavToggle = (e) => {
-  mobile_nav_toggle.classList.toggle("open");
+  mobile_nav_toggle && mobile_nav_toggle.classList.toggle("open");
   navList.classList.toggle("active");
 };
 const handleClickAccordionHeader = (e) => {
@@ -71,7 +71,8 @@ const handleClickNavLink = (e) => {
 [...navLink].forEach((item) => {
   item.addEventListener("click", handleClickNavLink);
 });
-mobile_nav_toggle.addEventListener("click", handleClickMobileNavToggle);
+mobile_nav_toggle &&
+  mobile_nav_toggle.addEventListener("click", handleClickMobileNavToggle);
 [...faqsAccordionHeader].forEach((item) => {
   item.addEventListener("click", handleClickAccordionHeader);
 });
@@ -112,12 +113,18 @@ formSell &&
     const img = imgP.getAttribute("src");
     const quantity = +e.target.elements.quantity.value;
     const id = +e.target.elements.id.value;
+    for (let i = 0; i < cartLS.list().length; i++) {
+      const id = cartLS.list()[i].id;
+      cartLS.update(cartLS.update(id, "status", false));
+    }
     const product = {
       id,
       img,
       name: nameP.textContent,
       price: price,
+      status: true,
     };
     btnFormSell.innerText = "Adding...";
+
     cartLS.add(product, quantity);
   });
