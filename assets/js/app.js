@@ -104,27 +104,31 @@ const imgP = document.querySelector(".enroll-sell__img img");
 const formSell = document.querySelector(".enroll-sell__quantity");
 const btnFormSell = document.querySelector(".enroll-sell__btn span");
 
+const price = priceP && +priceP.split(",").join("");
+console.log(price);
+const img = imgP && imgP.getAttribute("src");
+const id = idP && +idP.value;
+const product = {
+  id,
+  name: nameP && nameP.textContent,
+  img,
+  price: price,
+  status: true,
+};
+console.log(cartLS.list());
 // submit to add Local
 formSell &&
   formSell.addEventListener("submit", (e) => {
-    // e.preventDefault();
+    if (cartLS.list().length === 0) cartLS.add(product);
 
-    const price = +priceP.split(",").join("");
-    const img = imgP.getAttribute("src");
-    const quantity = +e.target.elements.quantity.value;
-    const id = +e.target.elements.id.value;
-    for (let i = 0; i < cartLS.list().length; i++) {
-      const id = cartLS.list()[i].id;
-      cartLS.update(cartLS.update(id, "status", false));
+    if (cartLS.list().length > 0) {
+      cartLS.list().map((item) => {
+        if (item.id === product.id) {
+          alert("da co san pham");
+        } else {
+          cartLS.remove(item.id);
+          cartLS.add(product);
+        }
+      });
     }
-    const product = {
-      id,
-      img,
-      name: nameP.textContent,
-      price: price,
-      status: true,
-    };
-    btnFormSell.innerText = "Adding...";
-
-    cartLS.add(product, quantity);
   });

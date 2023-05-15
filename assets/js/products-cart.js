@@ -6,7 +6,6 @@ const products = cartLS.list();
 function render() {
   products.map((item) => {
     if (item.status === true) {
-      const sumPrice = item.quantity * item.price;
       return (productsCart.innerHTML += `
             <div class="product-cart__item">
                   <div class="product-cart__img">
@@ -17,10 +16,10 @@ function render() {
           
                   <div class="product-cart__quantity">
                       
-                      <span class="product-cart__quantity--num">${item.quantity}</span>
+                      <span class="product-cart__quantity--num">1</span>
                       
                   </div>
-                  <p class="product-cart__price-sum">£ <span>${sumPrice}</span>.00</p>
+                  <p class="product-cart__price-sum">£ <span>${item.price}</span>.00</p>
                   <i onclick="deleteProduct(${item.id})" class="fa-solid fa-xmark product-cart__close"></i>
               </div>
             `);

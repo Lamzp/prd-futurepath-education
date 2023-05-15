@@ -8,7 +8,7 @@ const continueNextPage = document.querySelector(".contact-form__btn--one");
 
 const products = cartLS.list();
 const product_id = cartLS.list()[0].id;
-const product = cartLS.get(product_id);
+const productPay = cartLS.get(product_id);
 const ONLINE_ID = 100;
 const product_online = {
   id: 100,
@@ -26,29 +26,29 @@ cartProduct(
 if (product_id === ONLINE_ID) {
   if (radioGroupPrevious) radioGroupPrevious.style.display = "none";
   if (payText)
-    payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">225</span> </span>`;
+    payText.innerHTML = `<span class="pay-text__title--deposit">Secure your place at this programme by paying a deposit of £<span class="on-off">225</span> </span>`;
 } else {
   if (payText)
-    payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">795</span> </span>`;
+    payText.innerHTML = `<span class="pay-text__title--deposit">Secure your place at this programme by paying a deposit of £<span class="on-off">795</span> </span>`;
   [...onOf].forEach((item) => {
     item.addEventListener("change", (e) => {
       if (e.target.value === "off") {
-        payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">795</span> </span>`;
+        payText.innerHTML = `<span class="pay-text__title--deposit">Secure your place at this programme by paying a deposit of £<span class="on-off">795</span> </span>`;
       } else {
-        payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">225</span> </span>`;
+        payText.innerHTML = `<span class="pay-text__title--deposit">Secure your place at this programme by paying a deposit of £<span class="on-off">225</span> </span>`;
       }
     });
   });
 }
-[...onOf].forEach((item) => {
-  item.addEventListener("change", (e) => {
-    if (e.target.value === "off") {
-      payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">795</span> </span>`;
-    } else {
-      payText.innerHTML = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">225</span> </span>`;
-    }
-  });
-});
+// [...onOf].forEach((item) => {
+//   item.addEventListener("change", (e) => {
+//     if (e.target.value === "off") {
+//       payText.innerHTML = `<span class="pay-text__title--deposit">Secure your place at this programme by paying a deposit of £<span class="on-off">795</span> </span>`;
+//     } else {
+//       payText.innerHTML = `<span class="pay-text__title--deposit">Secure your place at this programme by paying a deposit of £<span class="on-off">225</span> </span>`;
+//     }
+//   });
+// });
 
 function cartProduct(img, name, price) {
   const template = `
@@ -84,30 +84,6 @@ function cartProduct(img, name, price) {
   stepCart.innerHTML = "";
   stepCart.insertAdjacentHTML("beforeend", template);
 }
-function payFull(price) {
-  const template = `<span class="pay-text__title">Pay a full fee of £${price}</span>`;
-  payText.innerHTML = "";
-  payText.insertAdjacentHTML("beforeend", template);
-}
-function payDeposit(price) {
-  const template = `<span class="pay-text__title">Secure your place at this programme by paying a deposit of £<span class="on-off">${price} </span></span>`;
-  payText.innerHTML = "";
-  payText.insertAdjacentHTML("beforeend", template);
-}
-function priceOnOff() {
-  let price = 795;
-  [...onOf].forEach((item) => {
-    item.addEventListener("change", (e) => {
-      if (e.target.value === "off") {
-        price = 795;
-      } else {
-        price = 225;
-      }
-    });
-  });
-  return price;
-}
-
 [...onOf].forEach((item) => {
   item.addEventListener("change", (e) => {
     cartLS.update(product_id, "status", true);
@@ -119,6 +95,7 @@ function priceOnOff() {
         cartLS.get(product_id).price
       );
     } else {
+      cartLS.remove(product_online.id);
       cartLS.add(product_online);
       cartLS.update(product_id, "status", false);
       cartLS.update(ONLINE_ID, "status", true);
@@ -134,19 +111,28 @@ function priceOnOff() {
 function priceRender() {
   [...payCategory].forEach((item) => {
     item.addEventListener("change", (e) => {
+      const payTextTitleDeposit = payText.querySelector(
+        ".pay-text__title--deposit"
+      );
       if (e.target.value === "deposit") {
-        payDeposit(priceOnOff());
+        console.log("deposit");
+        if (payTextTitleDeposit) payTextTitleDeposit.style.display = "block";
       } else {
-        payFull(product.price);
+        console.log("un-deposit");
+        if (payTextTitleDeposit) payTextTitleDeposit.style.display = "none";
+        payText.innerHTML = `<span class="pay-text__title--full">Full £<span class="on-off">${
+          cartLS.get(product_id).price
+        }</span> </span>`;
       }
     });
   });
 }
 priceRender();
-continueNextPage.addEventListener("click", () => {
-  cartLS.list().map((item) => {
-    if (item.status === false) {
-      cartLS.remove(item.id);
-    }
+continueNextPage &&
+  continueNextPage.addEventListener("click", () => {
+    cartLS.list().map((item) => {
+      if (item.status === false) {
+        cartLS.remove(item.id);
+      }
+    });
   });
-});
